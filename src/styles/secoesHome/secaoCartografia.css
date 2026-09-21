@@ -1,0 +1,71 @@
+.listaCartografias {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 20px;
+}
+
+.listaCartografias li {
+    background-color: var(--color-bg-secondary);
+    border: 1px solid var(--color-border-primary);
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    cursor: default;
+    gap: 10px;
+    transition: all 0.3s ease;
+}
+
+.listaCartografias li:last-child {
+    grid-column: span 2;
+    border: 1px solid var(--color-accent-dark);
+}
+
+.listaCartografias li:hover {
+    background-color: rgba(35, 20, 20, 0.95);
+    border-color: var(--color-accent);
+    transform: translateY(-5px);
+}
+
+.listaCartografias li > div:first-child p:first-child {
+    font-size: 14px;
+    color: var(--color-accent);
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.cabecalhoCardCartografia {
+    display: flex;
+    justify-content: space-between;
+}
+
+.tituloCardCartografia {
+    font-size: 22px;
+    font-weight: bold;
+    color: var(--color-text-primary);
+    margin-bottom: 10px;
+}
+
+.descCardCartografia {
+    font-size: 17px;
+    line-height: 1.6;
+    color: var(--color-text-secondary);
+    text-align: justify;
+}
+
+.listaCartografias li > div:last-child {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 15px;
+    border-top: 1px solid #22222B;
+    color: var(--color-text-secondary);
+    margin-top: auto;
+    font-size: 16px;
+}
+
+.temporadaCardCartografia {
+    color: var(--color-accent);
+    font-weight: bold;
+}

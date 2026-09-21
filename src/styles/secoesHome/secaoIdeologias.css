@@ -1,0 +1,125 @@
+.divSecaoTitulo2 {
+    display: flex;
+    flex-direction: column;
+    margin: 30px 0;
+    padding-bottom: 10px;
+    border-bottom: 2px solid var(--color-border-primary);
+    color: var(--color-text-secondary);
+}
+
+.divSecaoTitulo2 h3 {
+    text-transform: uppercase;
+    font-size: 24px;
+    color: var(--color-text-primary);
+}
+
+.ulIdeologias {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+    margin-bottom: 30px;
+}
+
+.liIdeologia {
+    background-color: var(--color-bg-tertiary);
+    border: 1px solid #3F181E;
+    padding: 20px;
+}
+
+.cabecalhoIdeologia {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+}
+
+.iconeIdeologia {
+    background-color: rgba(255, 51, 68, 0.08);
+    box-shadow: 0 0 30px rgba(255, 51, 68, 0.2);
+}
+
+.cabecalhoIdeologia p {
+    background-color: #1E0A0E;
+    color: var(--color-accent);
+    border: 1px solid var(--color-accent);
+    padding: 5px 10px;
+    font-size: 14px;
+    text-transform: uppercase;
+}
+
+.cabecalhoBadge {
+    background-color: var(--color-bg-light) !important;
+    border: 2px solid #3F181E !important;
+    color: var(--color-text-primary) !important;
+}
+
+.divNome {
+    margin: 20px 0;
+}
+
+.divNome h4 {
+    font-size: 20px;
+    text-transform: uppercase;
+}
+
+.divNome p {
+    color: #FF3344;
+    font-weight: 600;
+}
+
+.divInformacoes {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.divInformacoes p {
+    color: #94A3B8;
+    font-size: 18px;
+}
+
+.visaoEMetodo {
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.rodapeIdeologia {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid #272732;
+}
+
+.rodapeTextoEsquerda {
+    color: #FF3344;
+}
+
+.rodapeTextoDireita {
+    text-transform: uppercase;
+    color: #94A3B8;
+}
+
+.divResumoIdeologia {
+    width: 100%;
+    background-color: #0A0A0E;
+    border: 1px solid #272732;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+
+.divResumoIdeologia .textoEsquerda {
+    width: 85%;
+}
+
+.divResumoIdeologia strong {
+    color: #FFF !important;
+}
+
+.divResumoIdeologia p {
+    color: #94A3B8;
+    font-weight: 700;
+    font-size: 18px;
+}

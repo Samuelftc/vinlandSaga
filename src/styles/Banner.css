@@ -1,0 +1,164 @@
+.bannerContainer {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    margin-top: -140px;
+    padding-top: 140px;
+}
+
+.bannerSwiper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+
+.sectionBannerSlide {
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 100%;
+}
+
+.sectionBanner {
+    background-size: cover;
+    background-position: center;
+    height: 85vh;
+    display: flex;
+    align-items: center;
+}
+
+.informacoesBanner {
+    width: 55%;
+    color: rgb(213, 228, 241);
+    margin-left: 15%;
+    position: relative;
+    z-index: 1;
+}
+
+.informacoesResumo {
+    font-size: 20px;
+    margin-top: 20px;
+    text-align: justify;
+}
+
+.informacoesResumo h1 {
+    font-size: 50px;
+    text-transform: uppercase;
+}
+
+.ulBanner {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.liBanner {
+    text-transform: uppercase;
+    font-weight: bold;
+    padding: 10px 20px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.liBanner a {
+    text-decoration: none;
+    color: aliceblue;
+    position: relative;
+}
+
+#liBanner1 {
+    background-color: var(--color-accent-dark);
+    border-radius: 5px;
+}
+
+#liBanner1:hover {
+    background-color: var(--color-accent);
+    transition: 1s;
+}
+
+#liBanner2 {
+    border: 2px solid var(--color-accent-dark);
+    border-radius: 5px;
+}
+
+#liBanner2:hover {
+    background-color: var(--color-accent-dark);
+    transition: 1s;
+}
+
+hr {
+    margin-top: 20px;
+    border: 1px solid var(--color-accent-dark);
+}
+
+.listaBadges {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.divBadge {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.iconDivBadge {
+    width: 60px;
+    height: 60px;
+    background-color: rgba(35, 27, 27, 0.701);
+    border: 1px solid var(--color-accent-dark);
+    color: var(--color-accent);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+}
+
+.tituloBadge {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/* Swiper */
+
+/* Customizar os dots (pagination) */
+.swiper-pagination-bullet {
+  background-color: var(--color-accent-dark) !important;
+  opacity: 0.7;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: var(--color-accent) !important;
+  opacity: 1;
+}
+/* Customizar os buttons de nav - menores */
+.swiper-button-next,
+.swiper-button-prev {
+  color: rgb(0, 0, 0);
+  background-color: rgba(63, 21, 27, 0.5);
+  width: 60px;
+  height: 60px;
+  padding: 10px;
+  border-radius: 50%;
+}
+
+.swiper-button-next:after,
+.swiper-button-prev:after {
+  font-size: 20px;
+}
+
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+  background-color: rgba(255, 51, 68, 0.8);
+}
+

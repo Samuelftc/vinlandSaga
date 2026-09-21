@@ -1,0 +1,60 @@
+/* Importar Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Epilogue:wght@400;500;700;900&family=Inter:wght@400;500;600;700&display=swap');
+
+/* Configurações Globais do HTML */
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 140px;
+}
+
+body {
+    background-color: rgb(12, 7, 7);
+    color: aliceblue;
+    font-family: 'Inter', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* Títulos com Epilogue */
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Epilogue', sans-serif;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+/* Otimizações de Performance */
+* {
+    -webkit-tap-highlight-color: transparent;
+}
+
+/* Scrollbar Custom */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: rgb(20, 15, 15);
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgb(119, 13, 13);
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: rgb(226, 34, 34);
+}
+
+/* Firefox Scrollbar */
+* {
+    scrollbar-color: rgb(119, 13, 13) rgb(20, 15, 15);
+    scrollbar-width: thin;
+}
+
+/* Selection */
+::selection {
+    background-color: rgb(119, 13, 13);
+    color: aliceblue;
+}

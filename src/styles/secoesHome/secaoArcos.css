@@ -1,0 +1,69 @@
+.listaDeArcos {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+}
+
+.liArco {
+    padding: 20px;
+    background-color: var(--color-bg-secondary);
+    border: 1px solid var(--color-border-primary);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.liArco:hover {
+    transform: translateY(-6px);
+    border-color: var(--color-accent);
+    box-shadow: 0 12px 24px rgba(255, 51, 68, 0.12);
+}
+
+.cabecalhoArco {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+    color: var(--color-text-secondary);
+}
+
+.capitulosArco {
+    text-transform: uppercase;
+    color: var(--color-accent);
+    font-weight: bold;
+}
+
+.corpoArco {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    border-bottom: 2px solid var(--color-border-primary);
+    padding-bottom: 15px;
+    margin-bottom: 15px;
+}
+
+.corpoArco h4 {
+    font-size: 20px;
+}
+
+.corpoArco p {
+    color: var(--color-text-secondary);
+}
+
+.liArco a {
+    width: 100%;
+    text-align: center;
+    border: 1px solid var(--color-accent-dark);
+    padding: 5px 0;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: var(--color-text-primary);
+    font-weight: bold;
+    transition: transform 0.5s ease, background-color 0.5s ease, color 0.2s ease;
+}
+
+.liArco a:hover {
+    transform: translateY(-2px);
+    background-color: var(--color-accent);
+    color: #000;
+}

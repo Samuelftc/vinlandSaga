@@ -1,0 +1,83 @@
+footer {
+    background-color: var(--color-bg-primary);
+    border-top: 3px solid var(--color-border-primary);
+    padding: 50px 30px;
+    display: flex;
+    justify-content: space-around;
+    gap: 60px;
+    flex-wrap: wrap;
+    margin-top: 50px;
+}
+
+footer > div:first-child {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    min-width: 250px;
+}
+
+footer > div:first-child img {
+    width: 120px;
+    height: auto;
+}
+
+footer > div:first-child p {
+    font-size: 14px;
+    text-align: center;
+    line-height: 1.6;
+    color: var(--color-text-secondary);
+    max-width: 300px;
+}
+
+footer > div:last-child {
+    display: flex;
+    gap: 80px;
+    flex-wrap: wrap;
+}
+
+.blocoFooter {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    min-width: 200px;
+}
+
+.blocoFooter h3 {
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: var(--color-accent);
+    letter-spacing: 0.05em;
+}
+
+.blocoFooter ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.blocoFooter li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.blocoFooter a {
+    text-decoration: none;
+    color: var(--color-text-secondary);
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+.blocoFooter a:hover {
+    color: var(--color-accent);
+    font-weight: 500;
+}
+
+#contatoFooter a {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}

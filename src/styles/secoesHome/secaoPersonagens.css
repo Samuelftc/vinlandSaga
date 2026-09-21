@@ -1,0 +1,102 @@
+.sectionHome {
+    background-color: var(--color-bg-primary);
+    color: var(--color-text-primary);
+    padding: 20px;
+}
+
+.divSecaoTitulo {
+    display: flex;
+    justify-content: space-between;
+    text-transform: uppercase;
+    margin: 30px 0;
+    padding-bottom: 10px;
+    font-size: 24px;
+    border-bottom: 2px solid var(--color-border-primary);
+}
+
+.divSecaoTitulo a {
+    display: flex;
+    align-items: center;
+    color: var(--color-accent);
+    font-weight: bold;
+    font-size: 18px;
+    gap: 10px;
+    text-decoration: none;
+}
+
+.listaDePersonagens {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    gap: 20px;
+}
+
+.liPersonagem {
+    background-color: var(--color-bg-secondary);
+    border: 1px solid var(--color-border-primary);
+    border-top: 4px solid var(--color-accent);
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    transition: all 0.5s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.liPersonagem:hover {
+    scale: 1.05;
+    border: 1px solid red;
+}
+
+.liPersonagem img {
+    width: 100%;
+    height: 250px;
+    filter: brightness(0.72);
+}
+
+.liPersonagem::after {
+    content: "";
+    position: absolute;
+    inset: 0 0 auto 0;
+    height: 250px;
+    background: rgba(0, 0, 0, 0.22);
+    pointer-events: none;
+}
+
+.informacoesPersonagem {
+    padding: 10px;
+    color: var(--color-text-secondary);
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.informacoesSuperioresPersonagem {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    flex: 1;
+}
+
+.informacoesSuperioresPersonagem h4 {
+    text-transform: uppercase;
+    font-size: 18px;
+    color: var(--color-text-primary);
+}
+
+.informacoesInferioresPersonagem {
+    margin-top: 15px;
+    padding-top: 15px;
+    display: flex;
+    font-size: 14px;
+    border-top: 1px solid var(--color-border-primary);
+    justify-content: space-between;
+    text-transform: uppercase;
+    gap: 10px;
+}
+
+.informacoesInferioresPersonagem span {
+    color: var(--color-accent);
+    font-weight: 700;
+}
