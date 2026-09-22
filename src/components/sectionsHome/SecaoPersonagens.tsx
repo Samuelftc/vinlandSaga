@@ -1,5 +1,6 @@
 import type { Personagem } from "../../types/Personagem";
 import { ArrowRight } from "lucide-react";
+import { Link } from "react-router-dom";
 
 import '../../styles/secoesHome/secaoPersonagens.css'
 
@@ -12,7 +13,7 @@ export default function SecaoPersonagens({ personagens }: SecaoPersonagensProps)
         <section className="sectionHome">
             <div className="divSecaoTitulo">
                 <h3>Personagens em destaque</h3>
-                <a href="#">Ver todos personagens <ArrowRight /></a>
+                <Link to="/personagens">Ver todos personagens <ArrowRight /></Link>
             </div>
 
             <ul className="listaDePersonagens">

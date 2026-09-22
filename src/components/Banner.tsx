@@ -6,6 +6,7 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 
 import '../styles/Banner.css'
+import { Link } from 'react-router-dom';
 
 const bannerImages = [
     {
@@ -51,9 +52,9 @@ export default function Banner() {
                         <ul className='ulBanner'>
                             <li className='liBanner' id='liBanner1'>
                                 <Swords />
-                                <a href="">
+                                <Link to="/personagens">
                                     Explorar Personagens
-                                </a>
+                                </Link>
                             </li>
                             <li className='liBanner' id='liBanner2'>
                                 <BookOpen color='red' />

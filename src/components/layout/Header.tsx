@@ -2,6 +2,7 @@ import { Languages, Moon, Search } from 'lucide-react';
 import { useState, useEffect } from 'react';
 import '../../styles/Header.css'
 import '../../styles/Reset.css'
+import { Link } from 'react-router-dom';
 
 export default function Header() {
     const [isScrolled, setIsScrolled] = useState(false);
@@ -22,15 +23,15 @@ export default function Header() {
     return (
         <header className={isScrolled ? 'scrolled' : ''}>
             <div className="logo">
-                <a href="#">
+                <Link to="/">
                     <img src="/assets/images/vinlandSagaLogo.png" height={100} alt="" />
-                </a>
+                </Link>
             </div>
 
             <nav className='navPaginas'>
                 <ul className='listaPaginas'>
                     <li className='liPagina'>
-                        <a href="#">Personagens</a>
+                        <Link to="/personagens">Personagens</Link>
                     </li>
                     <li className='liPagina'>
                         <a href="#">Episódios</a>

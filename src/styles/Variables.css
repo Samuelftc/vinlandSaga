@@ -15,14 +15,23 @@
   /* Cores de Destaque */
   --color-accent: #FF3344;
   --color-accent-dark: #3F151B;
+  --color-accent-secondary: #E63946;
+  --color-accent-secondary-dark: #C41E3A;
 
   /* Cores de Texto */
   --color-text-primary: aliceblue;
   --color-text-secondary: #94A3B8;
+  --color-text-muted: #A1A1AA;
+  --color-text-white: #FFF;
 
   /* Efeitos */
   --color-overlay-dark: rgba(0, 0, 0, 0.7);
   --color-shadow: rgba(0, 0, 0, 0.5);
   --color-glass: rgba(255, 255, 255, 0.04);
   --color-glass-border: rgba(213, 228, 241, 0.15);
+
+  /* Superfícies e bordas (páginas internas) */
+  --color-bg-surface: #1c1c27;
+  --color-bg-input: #181820;
+  --color-border-subtle: #282730;
 }
