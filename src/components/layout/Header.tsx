@@ -37,7 +37,7 @@ export default function Header() {
                         <a href="#">Episódios</a>
                     </li>
                     <li className='liPagina'>
-                        <a href="#">Arcos</a>
+                        <Link to="/arcos">Arcos</Link>
                     </li>
                 </ul>
             </nav>

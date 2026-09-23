@@ -1,4 +1,5 @@
-import { Route, Routes } from 'react-router-dom';
+import { Route, Routes, useLocation } from 'react-router-dom';
+import { useEffect } from 'react';
 
 // Header
 import Header  from './components/layout/Header'
@@ -20,6 +21,7 @@ import SecaoCartografia from './components/sectionsHome/SecaoCartografia'
 import Footer from './components/layout/Footer'
 
 import PaginaPersonagens from './pages/paginaPersonagens';
+import PaginaArcos from './pages/paginaArcos';
 
 function Home() {
     return (
@@ -37,10 +39,17 @@ function Home() {
 }
 
 export default function App() {
+    const location = useLocation();
+
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, [location.pathname]);
+
     return (
         <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/personagens" element={<PaginaPersonagens />} />
+            <Route path="/arcos" element={<PaginaArcos />} />
         </Routes>
     );
 }

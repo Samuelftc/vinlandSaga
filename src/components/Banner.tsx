@@ -58,9 +58,9 @@ export default function Banner() {
                             </li>
                             <li className='liBanner' id='liBanner2'>
                                 <BookOpen color='red' />
-                                <a href="">
+                                <Link to="/arcos">
                                     Ver Arcos
-                                </a>
+                                </Link>
                             </li>
                         </ul>
                     </nav>

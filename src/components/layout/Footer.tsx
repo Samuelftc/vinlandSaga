@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import '../../styles/Footer.css'
 
 export default function Footer() {
@@ -13,9 +14,9 @@ export default function Footer() {
                 <div className="blocoFooter">
                     <h3>Links Rápidos</h3>
                     <ul>
-                        <li><a href="#">Personagens</a></li>
+                        <li><Link to="/personagens">Personagens</Link></li>
                         <li><a href="#">Episódios</a></li>
-                        <li><a href="#">Arcos</a></li>
+                        <li><Link to="/arcos">Arcos</Link></li>
                     </ul>
                 </div>
 

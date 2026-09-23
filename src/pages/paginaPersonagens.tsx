@@ -2,39 +2,77 @@ import { Link } from "react-router-dom";
 import Header from "../components/layout/Header";
 import "../styles/pages/paginaPersonagens.css";
 
-export interface buttonFiltro {
+import { personagensData } from "../data/Personagens";
+import { ArrowRight } from "lucide-react";
+import { useState } from "react";
+import Footer from "../components/layout/Footer";
+
+interface buttonFiltro {
     id: number,
-    texto: string
+    texto: string,
+    valor: string
 }
 
 const listaBotoesFiltro: buttonFiltro[] = [
     {
         id: 1,
-        texto: "Todos"
+        texto: "Todos",
+        valor: "todos"
     },
     {
         id: 2,
-        texto: "Bando de askeladd"
+        texto: "Bando de askeladd",
+        valor: "Bando de Askeladd"
     },
     {
         id: 3,
-        texto: "Jomsvikings"
+        texto: "Jomsvikings",
+        valor: "Jomsvikings"
     },
     {
         id: 4,
-        texto: "Realeza dinamarquesa / anglo-saxões"
+        texto: "Realeza dinamarquesa / anglo-saxões",
+        valor: "Realeza dinamarquesa / anglo-saxões"
     },
     {
         id: 5,
-        texto: "Islândia e exploradores"
+        texto: "Islândia e exploradores",
+        valor: "Islândia e exploradores"
     },
     {
         id: 6,
-        texto: "Fazenda de Ketil"
+        texto: "Fazenda de Ketil",
+        valor: "Fazenda de Ketil"
     },
 ]
 
+const ITEMS_POR_PAGINA = 12;
+
 export default function PaginaPersonagens() {
+    const [filtroAfiliacao, setFiltroAfiliacao] = useState<string>("todos");
+    const [filtroTemporada, setFiltroTemporada] = useState<string>("todas");
+    const [filtroStatus, setFiltroStatus] = useState<string>("todos");
+    const [paginaAtual, setPaginaAtual] = useState<number>(1);
+
+    const personagensFiltrados = personagensData.filter((p) => {
+        const afiliacaoOk = filtroAfiliacao === "todos" || p.afiliacao === filtroAfiliacao;
+        const temporadaOk = filtroTemporada === "todas" || (p.temporadas?.includes(filtroTemporada) ?? false);
+        const statusOk = filtroStatus === "todos" || p.status === filtroStatus;
+        return afiliacaoOk && temporadaOk && statusOk;
+    });
+
+    const totalPaginas = Math.ceil(personagensFiltrados.length / ITEMS_POR_PAGINA);
+    const indiceInicio = (paginaAtual - 1) * ITEMS_POR_PAGINA;
+    const indiceFim = indiceInicio + ITEMS_POR_PAGINA;
+    const personagensExibidos = personagensFiltrados.slice(indiceInicio, indiceFim);
+
+    const handleLimparFiltros = () => {
+        setFiltroAfiliacao("todos");
+        setFiltroTemporada("todas");
+        setFiltroStatus("todos");
+        setPaginaAtual(1);
+    };
+
     return (
         <>
             <Header />
@@ -55,15 +93,15 @@ export default function PaginaPersonagens() {
 
                             <ul className="ulBadges">
                                 <li>
-                                    <p style={{ color: "var(--color-accent-secondary)" }}>120+</p>
+                                    <p className="badgeNumero">{personagensData.length}+</p>
                                     <p>registrados</p>
                                 </li>
                                 <li>
-                                    <p style={{ color: "var(--color-text-white)" }}>4 grandes</p>
+                                    <p className="badgeNumeroWhite">6 grandes</p>
                                     <p>facções</p>
                                 </li>
                                 <li>
-                                    <p style={{ color: "var(--color-accent-secondary)" }}>nível aaa</p>
+                                    <p className="badgeNumero">nível aaa</p>
                                     <p>rigor canônico</p>
                                 </li>
                             </ul>
@@ -77,7 +115,15 @@ export default function PaginaPersonagens() {
                         <ul className="ulAfiliacoes">
                             {listaBotoesFiltro.map((botao) => (
                                 <li className="liAfiliacao" key={botao.id}>
-                                    <button className="buttonAfiliacao">{botao.texto}</button>
+                                    <button
+                                        className={`buttonAfiliacao ${filtroAfiliacao === botao.valor ? 'ativo' : ''}`}
+                                        onClick={() => {
+                                            setFiltroAfiliacao(botao.valor);
+                                            setPaginaAtual(1);
+                                        }}
+                                    >
+                                        {botao.texto}
+                                    </button>
                                 </li>
                             ))}
                         </ul>
@@ -86,37 +132,118 @@ export default function PaginaPersonagens() {
                     <div className="divSelecteds">
                         <div>
                             <label htmlFor="selectTemporada">Temporada e mídia</label>
-                            <select name="selectTemporada" id="selectTemporada">
+                            <select
+                                name="selectTemporada"
+                                id="selectTemporada"
+                                value={filtroTemporada}
+                                onChange={(e) => {
+                                    setFiltroTemporada(e.target.value);
+                                    setPaginaAtual(1);
+                                }}
+                            >
                                 <option value="todas">Todas temporadas</option>
-                                <option value="temporada1">Temporada 1</option>
-                                <option value="temporada2">Temporada 2</option>
-                                <option value="manga">Mangá</option>
+                                <option value="S1">Temporada 1</option>
+                                <option value="S2">Temporada 2</option>
+                                <option value="Mangá">Mangá</option>
                             </select>
                         </div>
                         <div>
                             <label htmlFor="selectVital">Status vital</label>
-                            <select name="selectVital" id="selectVital">
+                            <select
+                                name="selectVital"
+                                id="selectVital"
+                                value={filtroStatus}
+                                onChange={(e) => {
+                                    setFiltroStatus(e.target.value);
+                                    setPaginaAtual(1);
+                                }}
+                            >
                                 <option value="todos">Todos</option>
-                                <option value="vivo">Vivo</option>
-                                <option value="morto">Morto</option>
+                                <option value="Vivo">Vivo</option>
+                                <option value="Morto">Morto</option>
                             </select>
                         </div>
                     </div>
 
                     <div className="rodapeFiltros">
-                        <p>Mostrando 12 de 124 guerreiros</p>
+                        <p>Mostrando {indiceInicio + 1} de {personagensFiltrados.length} guerreiros</p>
                         <ul className="ulBotoesFiltro">
                             <li>
-                                <button className="botaoAplicarFiltro">Filtrar</button>
-                            </li>
-
-                            <li>
-                                <button className="botaoLimparFiltro">Limpar</button>
+                                <button className="botaoLimparFiltro" onClick={handleLimparFiltros}>Limpar</button>
                             </li>
                         </ul>
                     </div>
                 </div>
+
+                <section className="secaoPersonagens">
+                    {personagensExibidos.length > 0 ? (
+                        <>
+                            <ul className="listaDePersonagens">
+                                {personagensExibidos.map((personagem) => (
+                                    <li className="liPersonagem" key={personagem.id}>
+                                        <article>
+                                            <div className="divImagemPersonagem">
+                                                <img src={personagem.image} alt={personagem.nome} />
+                                                <p className="origemPersonagem">{personagem.origem}</p>
+                                            </div>
+                                            <div className="informacoesPersonagem">
+                                                <div className="informacoesSuperioresPersonagem">
+                                                    <h4>{personagem.nome}</h4>
+                                                    <p>{personagem.descMinima}</p>
+                                                </div>
+                                                <div className="informacoesInferioresPersonagem">
+                                                    <span>{personagem.temporadas}</span>
+                                                    <Link to={`/personagens/${personagem.id}`}>Ver Dossiê <ArrowRight size={20} /></Link>
+                                                </div>
+                                            </div>
+                                        </article>
+                                    </li>
+                                ))}
+                            </ul>
+
+                            {totalPaginas > 1 && (
+                                <div className="paginacao">
+                                    <button
+                                        onClick={() => setPaginaAtual(p => Math.max(1, p - 1))}
+                                        disabled={paginaAtual === 1}
+                                        className="botaoPaginacao"
+                                    >
+                                        Anterior
+                                    </button>
+
+                                    <div className="numeroPaginas">
+                                        {Array.from({ length: totalPaginas }, (_, i) => i + 1).map((num) => (
+                                            <button
+                                                key={num}
+                                                onClick={() => setPaginaAtual(num)}
+                                                className={`numeroPagina ${paginaAtual === num ? 'ativo' : ''}`}
+                                            >
+                                                {num}
+                                            </button>
+                                        ))}
+                                    </div>
+
+                                    <button
+                                        onClick={() => setPaginaAtual(p => Math.min(totalPaginas, p + 1))}
+                                        disabled={paginaAtual === totalPaginas}
+                                        className="botaoPaginacao"
+                                    >
+                                        Próximo
+                                    </button>
+                                </div>
+                            )}
+                        </>
+                    ) : (
+                        <div className="nenhumResultado">
+                            <p>Nenhum personagem encontrado com esses filtros.</p>
+                            <button className="botaoLimparFiltro" onClick={handleLimparFiltros}>
+                                Limpar filtros
+                            </button>
+                        </div>
+                    )}
+                </section>
             </main>
+            <Footer />
         </>
     );
 }

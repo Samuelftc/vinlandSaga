@@ -5,5 +5,7 @@ export interface Personagem {
     descMinima: string,
     descCompleta?: string,
     temporadas?: string,
-    origem?: string
+    origem?: string,
+    afiliacao?: string,
+    status?: string
 }
