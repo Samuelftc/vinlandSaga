@@ -77,7 +77,7 @@ export default function PaginaPersonagens() {
         <>
             <Header />
             <main>
-                <div className="topoMain">
+                <div className="topoMainPersonagens">
                     <nav aria-label="Breadcrumb">
                         <ul className="filaNav">
                             <li><Link to="/">Home</Link></li>

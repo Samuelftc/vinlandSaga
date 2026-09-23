@@ -1,0 +1,63 @@
+.topoMainArcos {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding-bottom: 50px;
+    border-bottom: 1px solid var(--color-border-subtle);
+}
+
+.topoMainTextosArcos {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.topoMainTextosArcos h1 {
+    font-size: 40px;
+}
+
+.informacoesInferioresTopoArcos {
+    width: 70%;
+}
+
+.topoMainTextosArcos .informacoesInferioresTopoArcos p {
+    color: var(--color-text-muted);
+}
+
+.ulCardsTopoArcos {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    margin-top: 20px;
+}
+
+.liCardTopoArcos {
+    width: 25%;
+}
+
+.liCardTopoArcos article {
+    background-color: #131318;
+    border: 1px solid #272530;
+    border-top: 3px solid #AC012C;
+    padding: 10px 20px;
+}
+
+.liCardTopoArcos article h5 {
+    font-size: 30px;
+}
+
+.tituloDiferenteCardTopoArco {
+    color: var(--color-accent);
+}
+
+.subtituloCardTopoArco {
+    text-transform: uppercase;
+    color: var(--color-accent-secondary);
+    font-weight: 600;
+    font-size: 16px;
+}
+
+.textoCardTopoArco {
+    margin-top: 5px;
+    color: #7A7682;
+}

@@ -10,16 +10,16 @@ import { Link } from 'react-router-dom';
 
 const bannerImages = [
     {
-        backgroundImage: "url('/assets/images/bannerPrincipal.png')",
+        backgroundImage: "url('/assets/images/banners/bannerPrincipal.png')",
     },
     {
-        backgroundImage: "url('/assets/images/bannerPrincipal2.png')",
+        backgroundImage: "url('/assets/images/banners/bannerPrincipal2.png')",
     },
     {
-        backgroundImage: "url('/assets/images/bannerPrincipal3.png')",
+        backgroundImage: "url('/assets/images/banners/bannerPrincipal3.png')",
     },
     {
-        backgroundImage: "url('/assets/images/bannerPrincipal4.png')",
+        backgroundImage: "url('/assets/images/banners/bannerPrincipal4.png')",
     },
 ];
 
