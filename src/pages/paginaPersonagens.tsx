@@ -77,31 +77,31 @@ export default function PaginaPersonagens() {
         <>
             <Header />
             <main>
-                <div className="topoMainPersonagens">
+                <div className="topo-header">
                     <nav aria-label="Breadcrumb">
-                        <ul className="filaNav">
+                        <ul className="breadcrumb">
                             <li><Link to="/">Home</Link></li>
                             <li><Link to="/personagens">Personagens</Link></li>
-                            <li className="ramoAtual" aria-current="page">Dossiês & registros nórdicos</li>
+                            <li className="breadcrumb-ativo" aria-current="page">Dossiês & registros nórdicos</li>
                         </ul>
                     </nav>
 
-                    <div className="topoMainTextos">
+                    <div className="topo-conteudo">
                         <h1>Códice de guerreiros & <br /> <span>personagens</span></h1>
-                        <div className="informacoesInferioresTopo">
+                        <div className="info-top">
                             <p>Exploração exaustiva dos heróis trágicos, mercenários impiedosos, monarcas bretões e dinamarqueses e colonos que moldaram a crônica sangrenta da Escandinávia e Inglaterra do século XI.</p>
 
-                            <ul className="ulBadges">
+                            <ul className="badges-lista">
                                 <li>
-                                    <p className="badgeNumero">{personagensData.length}+</p>
+                                    <p className="badge-valor">{personagensData.length}+</p>
                                     <p>registrados</p>
                                 </li>
                                 <li>
-                                    <p className="badgeNumeroWhite">6 grandes</p>
+                                    <p className="badge-claro">6 grandes</p>
                                     <p>facções</p>
                                 </li>
                                 <li>
-                                    <p className="badgeNumero">nível aaa</p>
+                                    <p className="badge-valor">nível aaa</p>
                                     <p>rigor canônico</p>
                                 </li>
                             </ul>
@@ -109,14 +109,14 @@ export default function PaginaPersonagens() {
                     </div>
                 </div>
 
-                <div className="divSelecaoFiltros">
-                    <div className="divAfiliacao">
+                <div className="painel-filtros">
+                    <div className="grupo-afiliacao">
                         <p>Facção / afiliação viking:</p>
-                        <ul className="ulAfiliacoes">
+                        <ul className="lista-afiliacao">
                             {listaBotoesFiltro.map((botao) => (
-                                <li className="liAfiliacao" key={botao.id}>
+                                <li key={botao.id}>
                                     <button
-                                        className={`buttonAfiliacao ${filtroAfiliacao === botao.valor ? 'ativo' : ''}`}
+                                        className={`botao-afiliacao ${filtroAfiliacao === botao.valor ? 'ativo' : ''}`}
                                         onClick={() => {
                                             setFiltroAfiliacao(botao.valor);
                                             setPaginaAtual(1);
@@ -129,7 +129,7 @@ export default function PaginaPersonagens() {
                         </ul>
                     </div>
 
-                    <div className="divSelecteds">
+                    <div className="grupo-selects">
                         <div>
                             <label htmlFor="selectTemporada">Temporada e mídia</label>
                             <select
@@ -165,11 +165,11 @@ export default function PaginaPersonagens() {
                         </div>
                     </div>
 
-                    <div className="rodapeFiltros">
+                    <div className="rodape-filtros">
                         <p>Mostrando {indiceInicio + 1} de {personagensFiltrados.length} guerreiros</p>
-                        <ul className="ulBotoesFiltro">
+                        <ul className="botoes-filtro">
                             <li>
-                                <button className="botaoLimparFiltro" onClick={handleLimparFiltros}>Limpar</button>
+                                <button className="botao-limpar" onClick={handleLimparFiltros}>Limpar</button>
                             </li>
                         </ul>
                     </div>
@@ -178,20 +178,20 @@ export default function PaginaPersonagens() {
                 <section className="secaoPersonagens">
                     {personagensExibidos.length > 0 ? (
                         <>
-                            <ul className="listaDePersonagens">
+                            <ul className="lista-personagens">
                                 {personagensExibidos.map((personagem) => (
-                                    <li className="liPersonagem" key={personagem.id}>
+                                    <li className="card-personagem" key={personagem.id}>
                                         <article>
-                                            <div className="divImagemPersonagem">
+                                            <div className="imagem-personagem">
                                                 <img src={personagem.image} alt={personagem.nome} />
-                                                <p className="origemPersonagem">{personagem.origem}</p>
+                                                <p className="origem-badge">{personagem.origem}</p>
                                             </div>
-                                            <div className="informacoesPersonagem">
-                                                <div className="informacoesSuperioresPersonagem">
+                                            <div className="info-card">
+                                                <div className="info-superior">
                                                     <h4>{personagem.nome}</h4>
                                                     <p>{personagem.descMinima}</p>
                                                 </div>
-                                                <div className="informacoesInferioresPersonagem">
+                                                <div className="info-inferior">
                                                     <span>{personagem.temporadas}</span>
                                                     <Link to={`/personagens/${personagem.id}`}>Ver Dossiê <ArrowRight size={20} /></Link>
                                                 </div>
@@ -206,17 +206,17 @@ export default function PaginaPersonagens() {
                                     <button
                                         onClick={() => setPaginaAtual(p => Math.max(1, p - 1))}
                                         disabled={paginaAtual === 1}
-                                        className="botaoPaginacao"
+                                        className="botao-pag"
                                     >
                                         Anterior
                                     </button>
 
-                                    <div className="numeroPaginas">
+                                    <div className="numeros-pagina">
                                         {Array.from({ length: totalPaginas }, (_, i) => i + 1).map((num) => (
                                             <button
                                                 key={num}
                                                 onClick={() => setPaginaAtual(num)}
-                                                className={`numeroPagina ${paginaAtual === num ? 'ativo' : ''}`}
+                                                className={`numero-pagina ${paginaAtual === num ? 'ativo' : ''}`}
                                             >
                                                 {num}
                                             </button>
@@ -226,7 +226,7 @@ export default function PaginaPersonagens() {
                                     <button
                                         onClick={() => setPaginaAtual(p => Math.min(totalPaginas, p + 1))}
                                         disabled={paginaAtual === totalPaginas}
-                                        className="botaoPaginacao"
+                                        className="botao-pag"
                                     >
                                         Próximo
                                     </button>
@@ -234,9 +234,9 @@ export default function PaginaPersonagens() {
                             )}
                         </>
                     ) : (
-                        <div className="nenhumResultado">
+                        <div className="nenhum-resultado">
                             <p>Nenhum personagem encontrado com esses filtros.</p>
-                            <button className="botaoLimparFiltro" onClick={handleLimparFiltros}>
+                            <button className="botao-limpar" onClick={handleLimparFiltros}>
                                 Limpar filtros
                             </button>
                         </div>

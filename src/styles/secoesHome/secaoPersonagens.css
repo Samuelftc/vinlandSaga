@@ -24,6 +24,10 @@
     text-decoration: none;
 }
 
+.divSecaoTitulo a:hover {
+    text-decoration: underline;
+}
+
 .listaDePersonagensHome {
     display: flex;
     justify-content: center;

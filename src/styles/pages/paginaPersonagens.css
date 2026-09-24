@@ -3,7 +3,7 @@ main {
     margin-top: 120px;
 }
 
-.topoMainPersonagens {
+.topo-header {
     display: flex;
     flex-direction: column;
     gap: 20px;
@@ -11,58 +11,58 @@ main {
     border-bottom: 1px solid var(--color-border-subtle);
 }
 
-.filaNav {
+.breadcrumb {
     display: flex;
     list-style: none;
     text-transform: uppercase;
     gap: 20px;
 }
 
-.filaNav a {
+.breadcrumb a {
     color: var(--color-text-muted);
     font-weight: 600;
     text-decoration: none;
 }
 
-.filaNav a:hover {
+.breadcrumb a:hover {
     text-decoration: underline;
 }
 
-.ramoAtual {
+.breadcrumb-ativo {
     color: var(--color-accent-secondary);
 }
 
-.topoMainTextos {
+.topo-conteudo {
     display: flex;
     flex-direction: column;
     gap: 10px;
 }
 
-.topoMainTextos h1 {
+.topo-conteudo h1 {
     font-size: 40px;
 }
 
-.topoMainTextos h1 span {
+.topo-conteudo h1 span {
     color: var(--color-accent-secondary);
 }
 
-.topoMainTextos div p {
+.topo-conteudo div p {
     color: var(--color-text-muted);
 }
 
-.informacoesInferioresTopo {
+.info-top {
     display: flex;
     gap: 100px;
 }
 
-.ulBadges {
+.badges-lista {
     display: flex;
     gap: 20px;
     list-style: none;
     margin-right: 50px;
 }
 
-.ulBadges li {
+.badges-lista li {
     background-color: var(--color-bg-secondary);
     width: 170px;
     padding: 20px 0;
@@ -72,20 +72,20 @@ main {
     border: 1px solid var(--color-border-subtle);
 }
 
-.divSelecaoFiltros {
+.painel-filtros {
     margin-top: 50px;
     background-color: var(--color-bg-secondary);
     border: 1px solid var(--color-border-subtle);
     padding: 20px;
 }
 
-.divAfiliacao p {
+.grupo-afiliacao p {
     font-weight: bold;
     text-transform: uppercase;
     font-size: 18px;
 }
 
-.ulAfiliacoes {
+.lista-afiliacao {
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
@@ -93,7 +93,7 @@ main {
     margin-top: 10px;
 }
 
-.buttonAfiliacao {
+.botao-afiliacao {
     padding: 5px 20px;
     text-transform: uppercase;
     background-color: var(--color-bg-surface);
@@ -104,7 +104,7 @@ main {
     cursor: pointer;
 }
 
-.divSelecteds {
+.grupo-selects {
     border-top: 1px solid var(--color-border-subtle);
     margin-top: 30px;
     padding-top: 30px;
@@ -112,11 +112,11 @@ main {
     gap: 30px;
 }
 
-.divSelecteds div {
+.grupo-selects div {
     width: 50%;
 }
 
-.divSelecteds div label {
+.grupo-selects div label {
     display: block;
     margin-bottom: 5px;
     text-transform: uppercase;
@@ -124,7 +124,7 @@ main {
     font-size: 14px;
 }
 
-.divSelecteds div select {
+.grupo-selects div select {
     width: 100%;
     padding: 5px;
     background-color: var(--color-bg-input);
@@ -133,7 +133,7 @@ main {
     cursor: pointer;
 }
 
-.rodapeFiltros {
+.rodape-filtros {
     border-top: 1px solid var(--color-border-subtle);
     margin-top: 30px;
     padding-top: 20px;
@@ -141,31 +141,31 @@ main {
     justify-content: space-between;
 }
 
-.ulBotoesFiltro {
+.botoes-filtro {
     list-style: none;
     display: flex;
     gap: 20px;
 }
 
-.ulBotoesFiltro button {
+.botoes-filtro button {
     padding: 5px 20px;
     text-transform: uppercase;
     cursor: pointer;
 }
 
-.ulBotoesFiltro .botaoAplicarFiltro {
+.botao-aplicar {
     background-color: var(--color-accent-secondary-dark);
     border: 1px solid var(--color-accent-secondary);
     color: var(--color-text-white);
 }
 
-.ulBotoesFiltro .botaoLimparFiltro {
+.botao-limpar {
     background-color: transparent;
     border: 2px solid var(--color-border-subtle);
     color: var(--color-text-muted);
 }
 
-.listaDePersonagens {
+.lista-personagens {
     margin-top: 50px;
     display: grid;
     gap: 20px;
@@ -174,7 +174,7 @@ main {
     list-style: none;
 }
 
-.liPersonagem {
+.card-personagem {
     background-color: var(--color-bg-secondary);
     border: 1px solid var(--color-border-primary);
     border-top: 4px solid var(--color-accent);
@@ -187,12 +187,12 @@ main {
     height: 100%;
 }
 
-.liPersonagem:hover {
+.card-personagem:hover {
     scale: 1.03;
     border: 1px solid red;
 }
 
-.liPersonagem::after {
+.card-personagem::after {
     content: "";
     position: absolute;
     inset: 0 0 auto 0;
@@ -201,23 +201,23 @@ main {
     pointer-events: none;
 }
 
-.liPersonagem article {
+.card-personagem article {
     display: flex;
     flex-direction: column;
     height: 100%;
 }
 
-.liPersonagem img {
+.card-personagem img {
     width: 100%;
     height: 250px;
     filter: brightness(0.72);
 }
 
-.divImagemPersonagem {
+.imagem-personagem {
     position: relative;
 }
 
-.liPersonagem .origemPersonagem {
+.card-personagem .origem-badge {
     position: absolute;
     right: 5px;
     bottom: 5px;
@@ -227,7 +227,7 @@ main {
     padding: 5px 10px;
 }
 
-.informacoesPersonagem {
+.info-card {
     padding: 10px;
     color: var(--color-text-secondary);
     display: flex;
@@ -236,20 +236,20 @@ main {
     gap: 10px;
 }
 
-.informacoesSuperioresPersonagem {
+.info-superior {
     display: flex;
     flex-direction: column;
     gap: 10px;
     flex: 1;
 }
 
-.informacoesSuperioresPersonagem h4 {
+.info-superior h4 {
     text-transform: uppercase;
     font-size: 18px;
     color: var(--color-text-primary);
 }
 
-.informacoesInferioresPersonagem {
+.info-inferior {
     margin-top: auto;
     padding-top: 15px;
     display: flex;
@@ -260,12 +260,12 @@ main {
     gap: 10px;
 }
 
-.informacoesInferioresPersonagem span {
+.info-inferior span {
     color: var(--color-accent);
     font-weight: 700;
 }
 
-.informacoesInferioresPersonagem a {
+.info-inferior a {
     display: flex;
     align-items: center;
     gap: 5px;
@@ -276,21 +276,21 @@ main {
     transition: color 0.3s ease;
 }
 
-.informacoesInferioresPersonagem a:hover {
+.info-inferior a:hover {
     color: var(--color-accent);
 }
 
-.buttonAfiliacao.ativo {
+.botao-afiliacao.ativo {
     background-color: var(--color-accent-secondary-dark);
     border-color: var(--color-accent-secondary);
     color: var(--color-text-white);
 }
 
-.badgeNumero {
+.badge-valor {
     color: var(--color-accent-secondary);
 }
 
-.badgeNumeroWhite {
+.badge-claro {
     color: var(--color-text-white);
 }
 
@@ -303,7 +303,7 @@ main {
     padding: 30px 0;
 }
 
-.botaoPaginacao {
+.botao-pag {
     padding: 10px 20px;
     background-color: var(--color-bg-surface);
     border: 2px solid var(--color-border-subtle);
@@ -314,23 +314,23 @@ main {
     transition: all 0.3s ease;
 }
 
-.botaoPaginacao:hover:not(:disabled) {
+.botao-pag:hover:not(:disabled) {
     background-color: var(--color-accent-secondary-dark);
     border-color: var(--color-accent-secondary);
     color: var(--color-text-white);
 }
 
-.botaoPaginacao:disabled {
+.botao-pag:disabled {
     opacity: 0.5;
     cursor: not-allowed;
 }
 
-.numeroPaginas {
+.numeros-pagina {
     display: flex;
     gap: 10px;
 }
 
-.numeroPagina {
+.numero-pagina {
     width: 40px;
     height: 40px;
     background-color: var(--color-bg-surface);
@@ -341,65 +341,65 @@ main {
     transition: all 0.3s ease;
 }
 
-.numeroPagina:hover {
+.numero-pagina:hover {
     background-color: var(--color-accent-secondary-dark);
     border-color: var(--color-accent-secondary);
     color: var(--color-text-white);
 }
 
-.numeroPagina.ativo {
+.numero-pagina.ativo {
     background-color: var(--color-accent-secondary);
     border-color: var(--color-accent-secondary);
     color: var(--color-text-white);
 }
 
-.nenhumResultado {
+.nenhum-resultado {
     text-align: center;
     padding: 60px 20px;
     color: var(--color-text-muted);
 }
 
-.nenhumResultado p {
+.nenhum-resultado p {
     font-size: 18px;
     margin-bottom: 30px;
 }
 
 @media (max-width: 1024px) {
-    .listaDePersonagens {
+    .lista-personagens {
         grid-template-columns: repeat(3, 1fr);
     }
 }
 
 @media (max-width: 768px) {
-    .listaDePersonagens {
+    .lista-personagens {
         grid-template-columns: repeat(2, 1fr);
     }
 
-    .informacoesInferioresTopo {
+    .info-top {
         flex-direction: column;
         gap: 20px;
     }
 
-    .ulBadges {
+    .badges-lista {
         margin-right: 0;
     }
 }
 
 @media (max-width: 480px) {
-    .listaDePersonagens {
+    .lista-personagens {
         grid-template-columns: 1fr;
     }
 
-    .divSelecteds {
+    .grupo-selects {
         flex-direction: column;
         gap: 20px;
     }
 
-    .divSelecteds div {
+    .grupo-selects div {
         width: 100%;
     }
 
-    .numeroPaginas {
+    .numeros-pagina {
         flex-wrap: wrap;
         max-width: 300px;
     }
