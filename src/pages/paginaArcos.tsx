@@ -4,6 +4,9 @@ import Header from "../components/layout/Header";
 import '../styles/pages/paginaArcos.css'
 import { BookOpen, Tv } from "lucide-react";
 
+import { arcos } from "../data/Arcos";
+
+
 export default function PaginaArcos() {
     return (
         <>
@@ -20,7 +23,7 @@ export default function PaginaArcos() {
 
                     <div className="topo-conteudo">
                         <h1>Arcos narrativos da saga</h1>
-                        <div className="info-top">
+                        <div className="info-top-Arcos">
                             <p>A trajetória completa de Thorfinn Karlsefni através de quatro eras marcantes: da vingança sangrenta nos campos de batalha da Inglaterra à busca utópica pela terra sem senhores nem escravos.</p>
                         </div>
                         <ul className="cards-top-lista">
@@ -112,7 +115,59 @@ export default function PaginaArcos() {
                             </div>
                         </div>
 
-                        
+
+                    </div>
+                </section>
+
+                <section className="secao-detalhes-Arcos">
+                    <div className="divSecaoTitulo">
+                        <h3>Detalhes dos Arcos</h3>
+                    </div>
+
+                    <div className="arcos">
+                        {arcos.map((arco) => (
+                            <div key={arco.id}>
+                                <div className="esquerda">
+                                    <div className="topo-arco">
+                                        <p>{arco.arco}</p>
+                                        <p>{arco.temporada}</p>
+                                        <p>{arco.capitulos}</p>
+                                        <p>Estúdio: {arco.midia}</p>
+                                    </div>
+
+                                    <div className="titulo-Arco">
+                                        <h4>{arco.titulo}</h4>
+                                        <p>{arco.lugares}</p>
+                                    </div>
+
+                                    <div>
+                                        <p>{arco.desCompleta}</p>
+                                        <div>
+                                            <div>
+                                                <p>Protagonistas e figuras centrais</p>
+                                                <p>{arco.protagonistas}</p>
+                                            </div>
+                                            <div>
+                                                <p>Temas filosóficos</p>
+                                                <p>{arco.filosofias}</p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div>
+                                        <p>Ponto critico / Clímax</p>
+                                        <p>{arco.climax}</p>
+                                    </div>
+
+                                    <button>Explorar arco</button>
+                                </div>
+
+                                <div className="direita">
+                                    <img src={arco.img} alt={arco.titulo} />
+                                    <p>Resultado: {arco.resultado}</p>
+                                </div>
+                            </div>
+                        ))}
                     </div>
                 </section>
             </main>
