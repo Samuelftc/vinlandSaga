@@ -5,7 +5,7 @@ export default function Footer() {
     return (
         <footer>
             <div className='resumoCopyright'>
-                <img src="/assets/images/vinlandSagaLogo.png" height={100} alt="" />
+                <Link to="/"><img src="/assets/images/vinlandSagaLogo.png" height={100} alt="" /></Link>
                 <p>&copy; 2026 Vinland Saga & Encyclopedia. Baseado na obra épica de Makoto Yukimura.
                     Todos os direitos reservados.</p>
             </div>
@@ -15,8 +15,10 @@ export default function Footer() {
                     <h3>Links Rápidos</h3>
                     <ul>
                         <li><Link to="/personagens">Personagens</Link></li>
-                        <li><a href="#">Episódios</a></li>
                         <li><Link to="/arcos">Arcos</Link></li>
+                        <li><Link to="/batalhas">Batalhas</Link></li>
+                        <li><Link to="#">Filosofias</Link></li>
+                        <li><Link to="#">Mundo</Link></li>
                     </ul>
                 </div>
 

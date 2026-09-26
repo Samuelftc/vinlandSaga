@@ -20,8 +20,9 @@ import SecaoCartografia from './components/sectionsHome/SecaoCartografia'
 // Footer
 import Footer from './components/layout/Footer'
 
-import PaginaPersonagens from './pages/paginaPersonagens';
+import PaginaPersonagens from './pages/PaginaPersonagens';
 import PaginaArcos from './pages/paginaArcos';
+import PaginaBatalhas from './pages/paginaBatalhas';
 
 function Home() {
     return (
@@ -50,6 +51,7 @@ export default function App() {
             <Route path="/" element={<Home />} />
             <Route path="/personagens" element={<PaginaPersonagens />} />
             <Route path="/arcos" element={<PaginaArcos />} />
+            <Route path="/batalhas" element={<PaginaBatalhas />} />
         </Routes>
     );
 }

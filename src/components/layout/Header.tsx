@@ -34,10 +34,16 @@ export default function Header() {
                         <Link to="/personagens">Personagens</Link>
                     </li>
                     <li className='liPagina'>
-                        <a href="#">Episódios</a>
+                        <Link to="/arcos">Arcos</Link>
                     </li>
                     <li className='liPagina'>
-                        <Link to="/arcos">Arcos</Link>
+                        <Link to="/batalhas">Batalhas</Link>
+                    </li>
+                    <li className='liPagina'>
+                        <Link to="#">Filosofias</Link>
+                    </li>
+                    <li className='liPagina'>
+                        <Link to="#">Mundo</Link>
                     </li>
                 </ul>
             </nav>

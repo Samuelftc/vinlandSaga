@@ -1,0 +1,72 @@
+.card-top-Batalhas {
+    background-color: #1B1B1F;
+    border: 2px solid #5B403F;
+    border-left: 4px solid var(--color-accent-secondary);
+    padding: 20px;
+    width: 33%;
+}
+
+.card-top-Batalhas article div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.card-top-Batalhas article div p {
+    text-transform: uppercase;
+    font-weight: 600;
+    color: #E4BEBC;
+}
+
+.card-top-Batalhas article h5 {
+    color: #E4E1E7;
+    font-size: 28px;
+}
+
+.card-texto-Batalhas {
+    color: #E4BEBC;
+}
+
+.filtros-Batalhas {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #5B403F;
+}
+
+.filtros-Batalhas p {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    text-transform: uppercase;
+    color: #E4E1E7;
+    padding-top: 20px;
+    font-weight: 600;
+}
+
+.lista-Filtros-Batalhas {
+    list-style: none;
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.botao-Filtro-Batalha {
+    background-color: #1B1B1F;
+    border: 1px solid #5B403F;
+    color: #E4BEBC;
+    padding: 5px 10px;
+}
+
+.botao-Filtro-Batalha:hover {
+    background-color: #FF535B;
+    color: #FFF;
+    cursor: pointer;
+}
+
+.botao-Filtro-Batalha.active {
+    background-color: #FF535B;
+    color: #FFF;
+}

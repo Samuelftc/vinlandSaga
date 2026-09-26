@@ -38,7 +38,7 @@ header.scrolled {
     list-style: none;
     display: flex;
     align-items: center;
-    gap: 30px;
+    gap: 20px;
 }
 
 .liPagina {
