@@ -13,7 +13,7 @@ export const arcos: Arco[] = [
         protagonistas: "Thorfinn (Jovem), Askeladd, Thorkell o Alto, Thors Snorresson, Príncipe Canute, Rei Sweyn.",
         filosofias: "Ciclo inexorável de vingança, imperialismo dinamarquês, o vazio da lâmina e a perda da alma humana.",
         climax: "O sangrento banquete real em York, o sacrifício supremo de Askeladd para salvar o País de Gales e Canute, e o colapso psicológico de Thorfinn ('Fim do Prólogo').",
-        img: "aaa",
+        img: "/assets/images/arcos/arco1.png",
         resultado: "Canuto ascende ao trono inglês"
     },
     {
@@ -28,7 +28,7 @@ export const arcos: Arco[] = [
         protagonistas: "Thorfinn Karlsefni, Einar, Snake (Guardião), Ketil, Rei Canute, Arnheid, Sverkel (O Velho Mestre).",
         filosofias: "Redenção espiritual, trauma e remorso de guerra, pacifismo radical prático e a tirania do sistema escravista nórdico.",
         climax: "A provação dos 100 golpes suportados em silêncio contra os guerreiros de Drott, o reencontro filosófico com o Rei Canute e o pacto pacífico que salvou a fazenda.",
-        img: "aaa",
+        img: "/assets/images/arcos/arco2.png",
         resultado: "Retorno à Islândia para zarpar"
     },
     {
@@ -43,7 +43,7 @@ export const arcos: Arco[] = [
         protagonistas: "Thorfinn, Gudrid (Navegadora), Einar, Hild (A Vingadora com Besta), Karli, Thorkell, Floki, Sigurd.",
         filosofias: "A reparação viva de crimes pretéritos, convivência sob a mira da vingança e a substituição do saque pelo comércio pacífico.",
         climax: "A renúncia de Thorfinn ao comando supremo dos Jomsvikings na fortaleza de Jomsborg, a dissolução definitiva daquela ordem militar e a partida vitoriosa com os tesouros bizantinos.",
-        img: "aaa",
+        img: "/assets/images/arcos/arco3.png",
         resultado: "Extinção dos mercenários Joms"
     },
     {
@@ -58,7 +58,7 @@ export const arcos: Arco[] = [
         protagonistas: "Thorfinn Karlsefni, Gudrid (Esposa & Conselheira), Einar, Mop (Xamã Lnu), Ivar (Facção Belicista), Stork",
         filosofias: "Choque inevitável de culturas, o preço humano da colonização, o perigo intrínseco do medo coletivo e a fragilidade do ideal pacifista perante a natureza humana.",
         climax: "A espada contrabandeada por Ivar desenterrada durante a crise xamânica, a deflagração da guerra com os guerreiros Lnu e o dilema final de Thorfinn entre resistir armado ou abandonar o sonho de Vinland para preservar almas.",
-        img: "aaa",
+        img: "/assets/images/arcos/arco4.png",
         resultado: "O homem pode viver sem guerras?"
     }
 ]

@@ -34,4 +34,17 @@
   --color-bg-surface: #1c1c27;
   --color-bg-input: #181820;
   --color-border-subtle: #282730;
+
+  /* Cores Específicas - Seção de Arcos */
+  --color-arcos-card-bg: #131318;
+  --color-arcos-border: #272530;
+  --color-arcos-highlight: #AC012C;
+  --color-arcos-text-muted: #7A7682;
+  --color-arcos-badge-bg: #e6394736;
+  --color-arcos-badge-text: #FF4D5A;
+  --color-arcos-text-secondary: #B3AFBE;
+  --color-arcos-border-dark: #2E2C38;
+  --color-arcos-text-light: #C4C0CB;
+  --color-arcos-highlight-subtle: #ac012c33;
+  --color-arcos-text-lighter: #F0EDF4;
 }

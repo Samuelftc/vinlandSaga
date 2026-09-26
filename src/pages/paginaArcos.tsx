@@ -2,9 +2,10 @@ import { Link } from "react-router-dom";
 import Header from "../components/layout/Header";
 
 import '../styles/pages/paginaArcos.css'
-import { BookOpen, Tv } from "lucide-react";
+import { BookOpen, MapPin, Tv } from "lucide-react";
 
 import { arcos } from "../data/Arcos";
+import Footer from "../components/layout/Footer";
 
 
 export default function PaginaArcos() {
@@ -126,51 +127,55 @@ export default function PaginaArcos() {
 
                     <div className="arcos">
                         {arcos.map((arco) => (
-                            <div key={arco.id}>
-                                <div className="esquerda">
-                                    <div className="topo-arco">
-                                        <p>{arco.arco}</p>
-                                        <p>{arco.temporada}</p>
-                                        <p>{arco.capitulos}</p>
-                                        <p>Estúdio: {arco.midia}</p>
+                            <div className="card-Arco" key={arco.id}>
+                                <div className="esquerda-Card">
+                                    <div className="topo-Arco">
+                                        <p className="badge-arco">{arco.arco}</p>
+                                        <p className="temp-Caps-Arco">{arco.temporada}</p>
+                                        <p className="temp-Caps-Arco">{arco.capitulos}</p>
+                                        <p className="midia-Arco">Estúdio: {arco.midia}</p>
                                     </div>
 
-                                    <div className="titulo-Arco">
-                                        <h4>{arco.titulo}</h4>
-                                        <p>{arco.lugares}</p>
+                                    <div className="div-Titulo-Arco">
+                                        <h4 className="titulo-Arco">{arco.titulo}</h4>
+                                        <p className="lugares-Arco"><MapPin size={18} /> {arco.lugares}</p>
                                     </div>
 
-                                    <div>
-                                        <p>{arco.desCompleta}</p>
-                                        <div>
+                                    <div className="corpo-Arco">
+                                        <p className="desCompleta-Arco">{arco.desCompleta}</p>
+                                        <div className="infos-Adicionais-Arco">
                                             <div>
-                                                <p>Protagonistas e figuras centrais</p>
-                                                <p>{arco.protagonistas}</p>
+                                                <p className="subtitulo-Infos">Protagonistas e figuras centrais</p>
+                                                <p className="texto-Infos">{arco.protagonistas}</p>
                                             </div>
                                             <div>
-                                                <p>Temas filosóficos</p>
-                                                <p>{arco.filosofias}</p>
+                                                <p className="subtitulo-Infos">Temas filosóficos</p>
+                                                <p className="texto-Infos">{arco.filosofias}</p>
                                             </div>
                                         </div>
                                     </div>
 
-                                    <div>
-                                        <p>Ponto critico / Clímax</p>
-                                        <p>{arco.climax}</p>
+                                    <div className="climax-Arco">
+                                        <p className="subtitulo-Infos">Ponto critico / Clímax</p>
+                                        <p className="texto-Infos">{arco.climax}</p>
                                     </div>
 
-                                    <button>Explorar arco</button>
+                                    <button className="botao-Explorar-Arco">Explorar arco</button>
                                 </div>
 
-                                <div className="direita">
+                                <div className="direita-Card">
                                     <img src={arco.img} alt={arco.titulo} />
-                                    <p>Resultado: {arco.resultado}</p>
+                                    <div className="resumoArco">
+                                        <p className="resultado-Arco"><span>Resultado:</span> {arco.resultado}</p>
+                                    </div>
                                 </div>
                             </div>
                         ))}
                     </div>
                 </section>
             </main>
+
+            <Footer />
         </>
     );
 }
