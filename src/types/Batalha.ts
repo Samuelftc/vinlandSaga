@@ -7,6 +7,7 @@ export interface Batalha {
     tituloDefesa?: string,
     textoDefesa?: string,
     subtituloAtaque?: string,
+    tituloAtaque?: string,
     textoAtaque?: string,
     descBatalha?: string,
     tatica?: string,
