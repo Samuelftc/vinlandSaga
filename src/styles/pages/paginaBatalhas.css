@@ -70,3 +70,165 @@
     background-color: #FF535B;
     color: #FFF;
 }
+
+.batalhas {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+.titulo-Batalha-Arco {
+    margin: 20px 0;
+}
+
+.titulo-Batalha-Arco span {
+    text-transform: none;
+    color: #FFB3B1;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.lista-Batalhas {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.card-Batalha {
+    background-color: #0E0E12;
+    border: 1px solid #5B403F;
+}
+
+.card-Top-Batalha {
+    background-color: #1B1B1F;
+    border-bottom: 2px solid #FF535B;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 30px;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.texto-Teatro {
+    color: #E4BEBC;
+}
+
+.texto-Registro {
+    color: #FFB3B1;
+}
+
+.card-Corpo-Batalha {
+    display: flex;
+    gap: 30px;
+    padding: 30px;
+}
+
+.esquerda-card-Batalha {
+    width: 60%;
+}
+
+.div-Titulo-Batalha {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #5B403F;
+}
+
+.div-Titulo-Batalha h3 {
+    color: #E4E1E7;
+    font-size: 28px;
+}
+
+.div-Titulo-Batalha p {
+    color: #FFB3B1;
+    font-size: 14px;
+    display: flex;
+    gap: 5px;
+}
+
+.defesas-Forcas {
+    margin-top: 10px;
+    background-color: #1B1B1F;
+    border: 1px solid #5B403F;
+    display: flex;
+    padding: 10px;
+}
+
+.defesas-Forcas div {
+    width: 50%;
+}
+
+.DF-Subtitulo {
+    text-transform: uppercase;
+    color: #E4BEBC;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.DF-Titulo {
+    color: #E4E1E7;
+    font-size: 16px;
+}
+
+.DF-Texto {
+    color: #E4BEBC;
+}
+
+.div-Desc-Batalha {
+    margin-top: 20px;
+}
+
+.div-Desc-Batalha label {
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.desc-Batalha {
+    margin-top: 5px;
+    color: #E4BEBC;
+}
+
+.div-Tatica {
+    margin-top: 10px;
+    padding: 10px;
+    background-color: #1B1B1F;
+    border-left: 3px solid #FF535B;
+}
+
+.div-Tatica label {
+    color: #E4BEBC;
+}
+
+.div-Tatica p {
+    color: #FFF;
+    font-weight: 600;
+}
+
+.direita-Card-Batalha {
+    width: 40%;
+}
+
+.imagem-Batalha {
+    width: 100%;
+    height: 50%;
+}
+
+.resumos-Batalha {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.resumos-Batalha div {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #5B403F;
+}
+
+.resumos-Batalha div label {
+    text-transform: uppercase;
+    color: #E4BEBC;
+    font-weight: 500;
+}
