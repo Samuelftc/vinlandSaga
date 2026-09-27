@@ -32,30 +32,43 @@ O design segue uma identidade visual escura e nórdica, com tipografia forte (Ep
 src/
 ├── components/
 │   ├── layout/
-│   │   ├── Header.tsx        # Navegação com efeito de scroll dinâmico
-│   │   └── Footer.tsx        # Rodapé com links e contato
+│   │   ├── Header.tsx        # Navegação com efeito scroll dinâmico
+│   │   └── Footer.tsx        # Rodapé com links
 │   ├── sectionsHome/
 │   │   ├── SecaoPersonagens.tsx
 │   │   ├── SecaoEpisodios.tsx
 │   │   ├── SecaoArcos.tsx
 │   │   ├── SecaoIdeologias.tsx
 │   │   ├── SecaoCartografia.tsx
-│   │   └── SecaoReflexoes.tsx
-│   └── Banner.tsx             # Carrossel principal (Swiper)
+│   │   └── Banner.tsx        # Carrossel principal (Swiper)
+├── pages/
+│   ├── PaginaPersonagens.tsx # Listagem com filtros & paginação
+│   ├── paginaArcos.tsx       # Detalhes dos 4 arcos narrativos
+│   ├── paginaBatalhas.tsx    # 11 confrontos com filtro por arco
+│   └── paginaFilosofias.tsx  # Análise hermenêutica completa
 ├── data/
-│   └── Personagens.ts         # Dados mockados
+│   ├── Personagens.ts        # 37 personagens completos
+│   ├── Arcos.ts              # 4 arcos da saga
+│   ├── Batalhas.ts           # 11 duelos & confrontos
+│   ├── Ideologias.ts         # 3 grandes doutrinas
+│   ├── Teses.ts              # 4 questões existenciais
+│   ├── Reflexoes.ts          # 2 reflexões profundas
+│   └── VozesMorais.ts        # 3 citações épicas
 ├── types/
-│   └── Personagem.ts          # Interfaces TypeScript
+│   ├── Personagem.ts
+│   ├── Arco.ts
+│   └── Batalha.ts
 ├── styles/
-│   ├── Variables.css          # Paleta de cores centralizada
-│   ├── Global.css             # Fontes e configurações globais
-│   ├── Reset.css              # CSS Reset
+│   ├── Variables.css         # Paleta centralizada + cores específicas
+│   ├── Global.css
+│   ├── Reset.css
 │   ├── Header.css
 │   ├── Footer.css
 │   ├── Banner.css
-│   └── secoesHome/             # CSS individual de cada seção
+│   ├── secoesHome/
+│   └── pages/                # CSS individual de cada página
 ├── main.tsx
-└── App.css
+└── App.tsx
 ```
 
 ---
@@ -63,19 +76,72 @@ src/
 ## Funcionalidades
 
 ### Home
-- **Banner em carrossel** com Swiper (autoplay, navegação e paginação), texto fixo sobreposto às imagens
-- **Header dinâmico** — transparente no topo da página, torna-se fixo com fundo sólido ao rolar a tela (com transição suave via `cubic-bezier`)
-- **Personagens em destaque** — cards com imagem, descrição e temporadas de aparição
-- **Episódios** — lista navegável por temporada, com sinopse de cada episódio
-- **Arcos narrativos** — resumo dos arcos do mangá/anime com capítulos e temporadas correspondentes
-- **Duelo de ideologias** — comparação visual entre a filosofia de Thorfinn (pacifismo) e Canuto (poder absoluto)
-- **Cartografia nórdica** — grid de locais-chave da história (Islândia, York, Jutlândia, Constantinopla, Vinland) com ícones contextuais
-- **Footer** com navegação rápida e informações de contato
+- **Banner em carrossel** com Swiper (autoplay, navegação, paginação)
+- **Header dinâmico** — transparente → fixo ao rolar (transição `cubic-bezier`)
+- **Personagens em destaque** — cards com imagem, descrição e temporadas
+- **Episódios** — navegável por temporada com sinopses
+- **Arcos narrativos** — resumo dos 4 arcos do mangá/anime
+- **Duelo de ideologias** — Thorfinn (pacifismo) vs Canuto (poder absoluto)
+- **Cartografia nórdica** — locais-chave com ícones contextuais
+- **Footer** com navegação rápida
+
+### Página de Personagens
+- **Listagem de 37 personagens** completos com imagem, descrição e temporadas
+- **Filtros funcionais:**
+  - Por afiliação (6 facções)
+  - Por temporada (S1, S2, Mangá)
+  - Por status (Vivo/Morto)
+- **Paginação dinâmica** (12 personagens por página)
+- **Reset automático** ao mudar filtros
+- Grid responsivo (4→3→2→1 colunas)
+
+### Página de Batalhas
+- **11 confrontos catalogados** com análise tática completa
+- **Filtro por arco narrativo:**
+  - Prólogo (4 duelos)
+  - Fazenda de Ketil (3 duelos)
+  - Expedição ao Leste (3 duelos)
+  - Saga de Vinland (1 confronto final)
+- **Detalhes de cada batalha:**
+  - Defesa vs Ataque (forças em confronto)
+  - Dinâmica do confronto
+  - Tática dominante
+  - Perguntas/respostas resumidas
+- **Layout 2 colunas responsivo**
+
+### Página de Arcos
+- **4 arcos narrativos detalhados:**
+  - Prólogo (Guerra na Inglaterra)
+  - Escravidão (Fazenda de Ketil)
+  - Expedição ao Leste (Rota comercial)
+  - Saga de Vinland (Reta final)
+- **Cronologia visual** com cards de progresso
+- **Ficha completa** de cada arco com personagens, filosofias, clímax e resultados
+- Cores específicas para destaque temático
+
+### Página de Filosofias
+- **Triângulo Ideológico Fundamental:** 3 grandes doutrinas
+  - Norse Belicismo (Thorkell, Jomsvikings)
+  - Realpolitik Coercitiva (Canute, poder estatal)
+  - Pacifismo Radical (Thorfinn, Thors)
+- **Dossié Hermenêutico Profundo:** 2 reflexões filosóficas
+  - O Vazio da Vingança vs Pacto com Hild
+  - Filosofia de Arnheid e Crítica da Servidão
+- **4 Grandes Questões Existenciais de Yukimura:**
+  - O Enigma do Padre Willibald (Amor discriminatório)
+  - Corrupção da Coroa & Espectro de Sweyn
+  - Ilusão da Honra Mercenária & Askeladd
+  - Fronteira de Vinland & Dilema da Coexistência
+- **Mural das Vozes Morais:** 3 citações épicas
+- **Conclusão Dialética:** Superação definitiva da espiral de destruição
 
 ### Design System
-- Paleta de cores centralizada em `Variables.css`, facilitando manutenção e futura implementação de temas (dark/light)
-- Tipografia dupla: **Epilogue** (títulos, em caixa alta e peso 900) e **Inter** (corpo de texto)
-- Microinterações consistentes: hover states com `translateY`, `scale` e `box-shadow` temático
+- **Paleta centralizada** em `Variables.css` com cores nórdicas
+- **Tipografia dupla:** Epilogue (títulos, peso 900) + Inter (corpo)
+- **Microinterações:** hover states com `translateY`, `scale`, shadows
+- **CSS refatorado:** naming em português simples (kebab-case)
+- **Variáveis temáticas específicas:** cores de arcos, ideologias e batalhas
+- **Grid responsivo** em todas as páginas (4→3→2→1 colunas)
 
 ---
 
@@ -111,12 +177,26 @@ O projeto estará disponível em `http://localhost:5173` (ou próxima porta livr
 
 ## Roadmap
 
-- [ ] Responsividade completa (mobile-first)
-- [ ] Páginas individuais de personagens, episódios e arcos
-- [ ] Seção de Reflexões como página dedicada
+### Concluído
+- [x] Home com 5+ seções temáticas
+- [x] Página de Personagens com filtros & paginação (37 personagens)
+- [x] Página de Arcos (4 arcos com 40+ campos de dados)
+- [x] Página de Batalhas (11 confrontos com filtro por arco)
+- [x] Página de Filosofias (análise hermenêutica completa)
+- [x] TypeScript com interfaces para todos os dados
+- [x] CSS refatorado com nomes em português (kebab-case)
+- [x] Variáveis CSS centralizadas + cores específicas por seção
+- [x] Header dinâmico com scroll behavior
+- [x] Grid responsivo (4→3→2→1 colunas)
+
+### Próximas Prioridades
+- [ ] Responsividade completa em mobile (media queries finais em Arcos/Batalhas)
+- [ ] Páginas individuais de personagens (`/personagens/:id`)
+- [ ] Páginas individuais de arcos (`/arcos/:id`)
 - [ ] Acessibilidade (aria-labels, navegação por teclado)
-- [ ] Dark/Light mode aproveitando as CSS variables já estruturadas
-- [ ] Migração dos dados mockados para uma fonte externa/API
+- [ ] Dark/Light mode (estrutura CSS pronta, só falta toggle)
+- [ ] Migração dos dados mockados para API/Backend
+- [ ] Testes unitários & E2E
 
 ---
 

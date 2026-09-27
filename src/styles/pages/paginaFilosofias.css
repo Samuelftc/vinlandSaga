@@ -1,0 +1,650 @@
+.topo-Filosofia {
+    background-color: #1B1B1F;
+    border: 1px solid #5B403F;
+    border-left: 4px solid #FF535B;
+    padding: 30px;
+}
+
+.info-top-Filosofias {
+    width: 80%;
+}
+
+.info-top-Filosofias p {
+    color: #E4BEBC !important;
+}
+
+.cards-top-lista-Filosofias {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    margin-top: 20px;
+    border-top: 2px solid #5B403F;
+    padding-top: 30px;
+}
+
+.card-top-Filosofia article {
+    background-color: #1F1F23;
+    border: 1px solid #5B403F;
+    padding: 10px 20px;
+}
+
+.topo-Card-Filosofia {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5px;
+}
+
+.pilar-Teorico {
+    color: #FF535B !important;
+    text-transform: uppercase;
+    font-size: 14px;
+}
+
+.card-top-Filosofia article h5 {
+    font-size: 20px;
+}
+
+.card-texto-Filosofias {
+    color: #AB8987;
+}
+
+/* Ideologias Fundamentais */
+
+.ideologias-Fundamentais {
+    margin-top: 60px;
+}
+
+.secao-Titulo-Ideologias {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 40px;
+}
+
+.secao-Titulo-Ideologias h2 {
+    font-size: 32px;
+    text-transform: uppercase;
+}
+
+.secao-Titulo-Ideologias p {
+    color: #E4BEBC;
+    max-width: 60%;
+    line-height: 1.6;
+}
+
+.ideologias-Principais {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.card-Ideologia {
+    background-color: #0F0F12;
+    border: 1px solid #3A3A3F;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.card-Ideologia.ativa {
+    border: 2px solid #E63946;
+    background-color: #1A0A0C;
+}
+
+.topo-Card-Ideologia {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    border-bottom: 1px solid #3A3A3F;
+    background-color: #161619;
+}
+
+.card-Ideologia.ativa .topo-Card-Ideologia {
+    background-color: #2A0A0C;
+    border-bottom-color: #E63946;
+}
+
+.titulo-Ideologia-Badge {
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: 600;
+    color: #AB8987;
+    letter-spacing: 1px;
+}
+
+.card-Ideologia.ativa .titulo-Ideologia-Badge {
+    color: #E63946;
+}
+
+.topo-Card-Ideologia svg {
+    color: #AB8987;
+    width: 20px;
+    height: 20px;
+}
+
+.card-Ideologia.ativa .topo-Card-Ideologia svg {
+    color: #E63946;
+}
+
+.corpo-Card-Ideologia {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.corpo-Card-Ideologia h3 {
+    font-size: 20px;
+    text-transform: uppercase;
+}
+
+.subtitulo-Card-Ideologia {
+    color: #AB8987;
+    font-size: 14px;
+}
+
+.resumo-Ideologia {
+    color: #C4C0CB;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.div-Fala-Ideologia {
+    border-left: 3px solid #E63946;
+    padding-left: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.frase-Card-Ideologia {
+    color: #E4BEBC;
+    font-style: italic;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.nome-Frase {
+    color: #E63946;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.div-Axioma {
+    background-color: #161619;
+    padding: 12px;
+    border: 1px solid #3A3A3F;
+}
+
+.axioma-Fundamental {
+    text-transform: uppercase;
+    color: #E63946;
+    font-size: 11px;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.frase-Axioma {
+    color: #C4C0CB;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.rodape-Card-Ideologia {
+    padding: 15px;
+    border-top: 1px solid #3A3A3F;
+    background-color: #0F0F12;
+    margin-top: auto;
+}
+
+.rodape-Card-Ideologia p {
+    color: #AB8987;
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.lista-Figuras-Arquetipas {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.figura-Arquetipa {
+    background-color: #1A1A1F;
+    padding: 6px 12px;
+    border: 1px solid #3A3A3F;
+    color: #C4C0CB;
+    font-size: 13px;
+}
+
+.card-Ideologia.ativa .figura-Arquetipa {
+    border-color: #E63946;
+    color: #E4BEBC;
+}
+
+@media (max-width: 1024px) {
+    .ideologias-Principais {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .secao-Titulo-Ideologias p {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .ideologias-Principais {
+        grid-template-columns: 1fr;
+    }
+
+    .topo-Filosofia {
+        padding: 20px;
+    }
+
+    .cards-top-lista-Filosofias {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .secao-Titulo-Ideologias h2 {
+        font-size: 24px;
+    }
+}
+
+/* Dossié Hermenêutico */
+
+.dossie-Hermeneutico {
+    background-color: #1B1B1F;
+    border: 1px solid #5B403F;
+    margin-top: 80px;
+    margin-bottom: 80px;
+    padding: 40px;
+}
+
+.cabecalho-Dossie {
+    margin-bottom: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding-bottom: 30px;
+    border-bottom: 2px solid #3A3A3F;
+}
+
+.etiqueta-Dossie {
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: 600;
+    color: #E63946;
+    letter-spacing: 2px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.etiqueta-Dossie::before {
+    content: "⚔";
+    font-size: 14px;
+}
+
+.cabecalho-Dossie h2 {
+    font-size: 28px;
+    text-transform: uppercase;
+    line-height: 1.3;
+}
+
+.grid-Reflexoes {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+}
+
+.card-Reflexao {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.numero-Reflexao {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.numero-Reflexao span {
+    font-size: 18px;
+    font-weight: 600;
+    color: #E63946;
+    text-transform: uppercase;
+}
+
+.numero-Reflexao::after {
+    content: "";
+    flex: 1;
+    height: 1px;
+    background-color: #3A3A3F;
+}
+
+.card-Reflexao h3 {
+    font-size: 18px;
+    text-transform: uppercase;
+    line-height: 1.4;
+}
+
+.resumo-Reflexao {
+    color: #C4C0CB;
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+.insight-Box {
+    background-color: #161619;
+    border: 1px solid #3A3A3F;
+    border-left: 3px solid #E63946;
+    padding: 15px;
+    margin-top: 10px;
+}
+
+.insight-Box p {
+    color: #E4BEBC;
+    font-size: 13px;
+    line-height: 1.7;
+}
+
+@media (max-width: 1024px) {
+    .grid-Reflexoes {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .dossie-Hermeneutico {
+        padding: 20px;
+    }
+
+    .cabecalho-Dossie h2 {
+        font-size: 22px;
+    }
+
+    .card-Reflexao h3 {
+        font-size: 16px;
+    }
+
+    .resumo-Reflexao {
+        font-size: 13px;
+    }
+
+    .insight-Box p {
+        font-size: 12px;
+    }
+}
+
+/* Teses de Yukimura */
+
+.teses-Yukimura {
+    margin-top: 80px;
+}
+
+.secao-Titulo-Teses {
+    margin-bottom: 40px;
+}
+
+.secao-Titulo-Teses h2 {
+    font-size: 32px;
+    text-transform: uppercase;
+}
+
+.grid-Teses {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.card-Tese {
+    background-color: #0F0F12;
+    border: 1px solid #3A3A3F;
+    display: flex;
+    flex-direction: column;
+}
+
+.topo-Card-Tese {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    border-bottom: 1px solid #3A3A3F;
+    background-color: #161619;
+}
+
+.badge-Tese {
+    text-transform: uppercase;
+    font-size: 11px;
+    font-weight: 600;
+    color: #E63946;
+    letter-spacing: 1px;
+}
+
+.topo-Card-Tese svg {
+    color: #AB8987;
+    width: 20px;
+    height: 20px;
+}
+
+.corpo-Card-Tese {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.corpo-Card-Tese h3 {
+    font-size: 18px;
+    text-transform: uppercase;
+    line-height: 1.4;
+}
+
+.descricao-Tese {
+    color: #C4C0CB;
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+.footer-Card-Tese {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding-top: 15px;
+    border-top: 1px solid #3A3A3F;
+}
+
+.label-Eixo {
+    text-transform: uppercase;
+    color: #E63946;
+    font-size: 11px;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.eixo-Tese {
+    color: #C4C0CB;
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+.capitulo-Tese {
+    text-transform: uppercase;
+    color: #AB8987;
+    font-size: 11px;
+    font-weight: 600;
+}
+
+@media (max-width: 1024px) {
+    .grid-Teses {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .secao-Titulo-Teses h2 {
+        font-size: 24px;
+    }
+
+    .corpo-Card-Tese h3 {
+        font-size: 16px;
+    }
+
+    .descricao-Tese {
+        font-size: 13px;
+    }
+}
+
+/* Mural das Vozes Morais */
+
+.mural-Vozes-Morais {
+    margin-top: 80px;
+    margin-bottom: 80px;
+}
+
+.mural-Vozes-Morais h2 {
+    font-size: 32px;
+    text-transform: uppercase;
+    margin-bottom: 40px;
+}
+
+.grid-Vozes {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.card-Voz-Moral {
+    background-color: #0F0F12;
+    border: 1px solid #3A3A3F;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.numero-Voz {
+    font-size: 24px;
+    font-weight: 700;
+    color: #E63946;
+    text-transform: uppercase;
+}
+
+.citacao-Voz {
+    color: #E4BEBC;
+    font-size: 14px;
+    font-style: italic;
+    line-height: 1.6;
+    flex: 1;
+}
+
+.footer-Voz {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    padding-top: 15px;
+    border-top: 1px solid #3A3A3F;
+}
+
+.personagem-Voz {
+    color: #C4C0CB;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.contexto-Voz {
+    color: #AB8987;
+    font-size: 12px;
+}
+
+/* Conclusão da Enciclopédia */
+
+.conclusao-Enciclopedia {
+    margin-bottom: 80px;
+}
+
+.conteudo-Conclusao {
+    background-color: #0A0A0D;
+    border: 2px solid #E63946;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.etiqueta-Conclusao {
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: 600;
+    color: #E63946;
+    letter-spacing: 2px;
+}
+
+.conteudo-Conclusao h2 {
+    font-size: 28px;
+    text-transform: uppercase;
+    line-height: 1.3;
+}
+
+.texto-Conclusao {
+    color: #E4BEBC;
+    font-size: 15px;
+    line-height: 1.8;
+}
+
+.botao-Explorar {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background-color: #E63946;
+    color: #FFF;
+    padding: 12px 24px;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 12px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    letter-spacing: 1px;
+    width: fit-content;
+}
+
+.botao-Explorar:hover {
+    background-color: #C41E3A;
+    transform: translateX(5px);
+}
+
+@media (max-width: 1024px) {
+    .grid-Vozes {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .grid-Vozes {
+        grid-template-columns: 1fr;
+    }
+
+    .mural-Vozes-Morais h2 {
+        font-size: 24px;
+    }
+
+    .conteudo-Conclusao {
+        padding: 20px;
+    }
+
+    .conteudo-Conclusao h2 {
+        font-size: 22px;
+    }
+
+    .texto-Conclusao {
+        font-size: 14px;
+    }
+}
