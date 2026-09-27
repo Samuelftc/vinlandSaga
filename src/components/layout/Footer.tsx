@@ -17,7 +17,7 @@ export default function Footer() {
                         <li><Link to="/personagens">Personagens</Link></li>
                         <li><Link to="/arcos">Arcos</Link></li>
                         <li><Link to="/batalhas">Batalhas</Link></li>
-                        <li><Link to="#">Filosofias</Link></li>
+                        <li><Link to="/filosofias">Filosofias</Link></li>
                         <li><Link to="#">Mundo</Link></li>
                     </ul>
                 </div>

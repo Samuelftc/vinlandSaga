@@ -23,6 +23,7 @@ import Footer from './components/layout/Footer'
 import PaginaPersonagens from './pages/PaginaPersonagens';
 import PaginaArcos from './pages/paginaArcos';
 import PaginaBatalhas from './pages/paginaBatalhas';
+import PaginaFilosofias from './pages/paginaFilosofias';
 
 function Home() {
     return (
@@ -52,6 +53,7 @@ export default function App() {
             <Route path="/personagens" element={<PaginaPersonagens />} />
             <Route path="/arcos" element={<PaginaArcos />} />
             <Route path="/batalhas" element={<PaginaBatalhas />} />
+            <Route path="/filosofias" element={<PaginaFilosofias />} />
         </Routes>
     );
 }

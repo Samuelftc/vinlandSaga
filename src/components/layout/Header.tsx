@@ -40,7 +40,7 @@ export default function Header() {
                         <Link to="/batalhas">Batalhas</Link>
                     </li>
                     <li className='liPagina'>
-                        <Link to="#">Filosofias</Link>
+                        <Link to="/filosofias">Filosofias</Link>
                     </li>
                     <li className='liPagina'>
                         <Link to="#">Mundo</Link>
