@@ -45,7 +45,8 @@ src/
 │   ├── PaginaPersonagens.tsx # Listagem com filtros & paginação
 │   ├── paginaArcos.tsx       # Detalhes dos 4 arcos narrativos
 │   ├── paginaBatalhas.tsx    # 11 confrontos com filtro por arco
-│   └── paginaFilosofias.tsx  # Análise hermenêutica completa
+│   ├── paginaFilosofias.tsx  # Análise hermenêutica completa
+│   └── paginaMundo.tsx       # Cartografia de 6 regiões
 ├── data/
 │   ├── Personagens.ts        # 37 personagens completos
 │   ├── Arcos.ts              # 4 arcos da saga
@@ -53,7 +54,8 @@ src/
 │   ├── Ideologias.ts         # 3 grandes doutrinas
 │   ├── Teses.ts              # 4 questões existenciais
 │   ├── Reflexoes.ts          # 2 reflexões profundas
-│   └── VozesMorais.ts        # 3 citações épicas
+│   ├── VozesMorais.ts        # 3 citações épicas
+│   └── Regioes.ts            # 6 regiões & cartografia
 ├── types/
 │   ├── Personagem.ts
 │   ├── Arco.ts
@@ -135,6 +137,19 @@ src/
 - **Mural das Vozes Morais:** 3 citações épicas
 - **Conclusão Dialética:** Superação definitiva da espiral de destruição
 
+### Página de Mundo
+- **Grande Atlas Interativo:** 6 regiões detalhadas
+  - Islândia (Prólogo & Partida)
+  - Inglaterra & Jórvík (Guerra Saxônica)
+  - Jutlândia & Ketil (Redenção & Servidão)
+  - Ilhas Orkney (Refúgio Operacional)
+  - Miklagard (Expedição do Leste)
+  - Vinland (Terra Prometida & Clímax)
+- **Cartografia completa:** coordenadas, clima, importância na trama
+- **Figuras-chave por região** com destaque a personagens principais
+- **Status de acesso** com badges especiais para zonas de guerra
+- **Notas adicionais** com contexto geográfico e político
+
 ### Design System
 - **Paleta centralizada** em `Variables.css` com cores nórdicas
 - **Tipografia dupla:** Epilogue (títulos, peso 900) + Inter (corpo)
@@ -183,6 +198,7 @@ O projeto estará disponível em `http://localhost:5173` (ou próxima porta livr
 - [x] Página de Arcos (4 arcos com 40+ campos de dados)
 - [x] Página de Batalhas (11 confrontos com filtro por arco)
 - [x] Página de Filosofias (análise hermenêutica completa)
+- [x] Página de Mundo (6 regiões com cartografia interativa)
 - [x] TypeScript com interfaces para todos os dados
 - [x] CSS refatorado com nomes em português (kebab-case)
 - [x] Variáveis CSS centralizadas + cores específicas por seção

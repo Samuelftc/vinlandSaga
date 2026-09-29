@@ -1,0 +1,232 @@
+main {
+    padding: 50px;
+    margin-top: 120px;
+}
+
+.topo-header {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding-bottom: 50px;
+    border-bottom: 1px solid var(--color-border-subtle);
+}
+
+.breadcrumb {
+    display: flex;
+    list-style: none;
+    text-transform: uppercase;
+    gap: 20px;
+}
+
+.breadcrumb a {
+    color: var(--color-text-muted);
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.breadcrumb a:hover {
+    text-decoration: underline;
+}
+
+.breadcrumb-ativo {
+    color: var(--color-accent-secondary);
+}
+
+.topo-conteudo {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.topo-conteudo h1 {
+    font-size: 40px;
+}
+
+.info-top {
+    width: 70%;
+}
+
+.topo-conteudo .info-top p {
+    color: var(--color-text-muted);
+}
+
+/* Atlas Interativo */
+
+.atlas-interativo {
+    margin-top: 60px;
+}
+
+.cabecalho-Atlas {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 40px;
+    padding-bottom: 20px;
+    border-bottom: 2px solid var(--color-border-subtle);
+}
+
+.cabecalho-Atlas h2 {
+    font-size: 28px;
+    text-transform: uppercase;
+}
+
+.filtro-Coords {
+    text-transform: uppercase;
+    color: var(--color-text-muted);
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+.grid-Regioes {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.card-Regiao {
+    background-color: #0F0F12;
+    border: 1px solid var(--color-border-subtle);
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.topo-Card-Regiao {
+    padding: 15px;
+    border-bottom: 1px solid var(--color-border-subtle);
+    background-color: #161619;
+}
+
+.nome-Coords {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.icone-Regiao {
+    font-size: 18px;
+    color: var(--color-accent-secondary);
+}
+
+.topo-Card-Regiao h3 {
+    font-size: 18px;
+    text-transform: uppercase;
+}
+
+.coords-Regiao {
+    color: var(--color-text-muted);
+    font-size: 12px;
+    font-weight: 600;
+    font-family: monospace;
+}
+
+.badge-Status {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background-color: var(--color-accent-secondary);
+    color: #FFF;
+    padding: 4px 10px;
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.corpo-Card-Regiao {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.descricao-Regiao {
+    color: var(--color-text-muted);
+    font-size: 13px;
+    line-height: 1.6;
+}
+
+.info-Regiao {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    padding: 10px;
+    background-color: #161619;
+    border: 1px solid var(--color-border-subtle);
+}
+
+.label-Info {
+    text-transform: uppercase;
+    color: var(--color-accent-secondary);
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+.valor-Info {
+    color: var(--color-text-muted);
+    font-size: 12px;
+}
+
+.nota-Adicional {
+    text-transform: uppercase;
+    color: var(--color-accent-secondary);
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+.rodape-Card-Regiao {
+    padding: 15px;
+    border-top: 1px solid var(--color-border-subtle);
+    background-color: #0A0A0D;
+}
+
+.status-Acesso {
+    text-transform: uppercase;
+    color: var(--color-text-muted);
+    font-size: 10px;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.valor-Status {
+    color: var(--color-accent-secondary);
+    font-size: 12px;
+    font-weight: 600;
+}
+
+@media (max-width: 1024px) {
+    .grid-Regioes {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .cabecalho-Atlas {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .info-top {
+        width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .grid-Regioes {
+        grid-template-columns: 1fr;
+    }
+
+    .topo-conteudo h1 {
+        font-size: 28px;
+    }
+
+    .cabecalho-Atlas h2 {
+        font-size: 22px;
+    }
+
+    .descricao-Regiao {
+        font-size: 12px;
+    }
+}
