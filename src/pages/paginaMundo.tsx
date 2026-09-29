@@ -5,6 +5,8 @@ import Footer from "../components/layout/Footer";
 
 import '../styles/pages/paginaMundo.css'
 import { regioes } from "../data/Regioes";
+import { fichasGeopoliticas } from "../data/FichasGeopoliticas";
+import { engenhariaNaval } from "../data/EngenhariaNaval";
 
 export default function PaginaMundo() {
     return (
@@ -83,6 +85,126 @@ export default function PaginaMundo() {
                                 <div className="rodape-Card-Regiao">
                                     <p className="status-Acesso">Status de Acesso:</p>
                                     <p className="valor-Status">{regiao.statusAcesso}</p>
+                                </div>
+                            </div>
+                        ))}
+                    </div>
+                </section>
+
+                <section className="fichas-geopoliticas">
+                    <div className="cabecalho-Fichas">
+                        <h2>Ficha Geopolítica & Nações da Época</h2>
+                        <p className="subtitulo-Fichas">Balanço Militar & Doutrinas Século XI</p>
+                    </div>
+
+                    <div className="tabela-Geopolitica">
+                        <div className="cabecalho-Tabela">
+                            <div className="coluna-Faccao">Facção / Estado</div>
+                            <div className="coluna-Territorio">Território Nuclear</div>
+                            <div className="coluna-Doutrina">Doutrina & Força Militar</div>
+                            <div className="coluna-Lideranca">Liderança Canônica</div>
+                            <div className="coluna-Relacao">Relação com Vinland</div>
+                        </div>
+
+                        {fichasGeopoliticas.map((ficha) => (
+                            <div className={`linha-Ficha ficha-${ficha.statusRelacao}`} key={ficha.id}>
+                                <div className="coluna-Faccao">
+                                    <p className="nome-Faccao">{ficha.faccao}</p>
+                                    <p className="desc-Faccao">{ficha.descricaoEstado}</p>
+                                </div>
+                                <div className="coluna-Territorio">
+                                    <p className="valor-Territorio">{ficha.territoriNuclear}</p>
+                                </div>
+                                <div className="coluna-Doutrina">
+                                    <p className="valor-Doutrina">{ficha.doutrinas}</p>
+                                </div>
+                                <div className="coluna-Lideranca">
+                                    <p className="valor-Lideranca">{ficha.liderancaCanonica}</p>
+                                </div>
+                                <div className="coluna-Relacao">
+                                    <p className="valor-Relacao">{ficha.relacaoVinland}</p>
+                                </div>
+                            </div>
+                        ))}
+                    </div>
+                </section>
+
+                <section className="engenharia-naval">
+                    <div className="cabecalho-Engenharia">
+                        <h2>Engenharia Náutica & Sobrevivência no Atlântico</h2>
+                        <p className="subtitulo-Engenharia">Arquitetura Clinker & Orientação Polar</p>
+                    </div>
+
+                    <div className="grid-Vessels">
+                        {engenhariaNaval.map((vessel) => (
+                            <div className={`card-Vessel card-${vessel.categoria}`} key={vessel.id}>
+                                <div className="topo-Card-Vessel">
+                                    <div className="tipo-Vessel">{vessel.tipo}</div>
+                                    <div className="icone-Vessel">{vessel.icone}</div>
+                                </div>
+
+                                <div className="corpo-Card-Vessel">
+                                    <div className="nome-Vessel">
+                                        <h3>{vessel.nomeVeiculo}</h3>
+                                        <p className="nome-Alterno">{vessel.nomeAlterno}</p>
+                                    </div>
+
+                                    <p className="descricao-Vessel">{vessel.descricao}</p>
+
+                                    <div className="especificacoes-Vessel">
+                                        {vessel.especificacoes.comprimento && (
+                                            <div className="item-Esp">
+                                                <p className="label-Esp">Comprimento Nédio:</p>
+                                                <p className="valor-Esp">{vessel.especificacoes.comprimento}</p>
+                                            </div>
+                                        )}
+                                        {vessel.especificacoes.propulsao && (
+                                            <div className="item-Esp">
+                                                <p className="label-Esp">Propulsão{vessel.id === 2 ? ' Primária' : ''}:</p>
+                                                <p className="valor-Esp">{vessel.especificacoes.propulsao}</p>
+                                            </div>
+                                        )}
+                                        {vessel.especificacoes.velocidade && (
+                                            <div className="item-Esp">
+                                                <p className="label-Esp">Velocidade Máxima:</p>
+                                                <p className="valor-Esp">{vessel.especificacoes.velocidade}</p>
+                                            </div>
+                                        )}
+                                        {vessel.especificacoes.capacidade && (
+                                            <div className="item-Esp">
+                                                <p className="label-Esp">Capacidade de Carga:</p>
+                                                <p className="valor-Esp">{vessel.especificacoes.capacidade}</p>
+                                            </div>
+                                        )}
+                                    </div>
+
+                                    <div className="finalidade-Vessel">
+                                        <p className="label-Finalidade">Finalidade Canônica:</p>
+                                        <p className="valor-Finalidade">{vessel.finalidadeCanonica}</p>
+                                    </div>
+
+                                    {vessel.id === 3 && vessel.recursoEspecial && (
+                                        <div className="mecanismo-Orientacao">
+                                            <p className="label-Mecanismo">⚔ Mecanismo de Orientação:</p>
+                                            <p className="valor-Mecanismo">{vessel.recursoValor}</p>
+                                        </div>
+                                    )}
+                                </div>
+
+                                <div className="rodape-Card-Vessel">
+                                    {vessel.id !== 3 ? (
+                                        <>
+                                            <p className="label-Recurso">{vessel.recursoEspecial}</p>
+                                            <p className="valor-Recurso">{vessel.recursoValor}</p>
+                                        </>
+                                    ) : (
+                                        <>
+                                            <div className="artefato-Leif">
+                                                <p className="label-Artefato">{vessel.artefato}</p>
+                                                <p className="valor-Navegacao">{vessel.navegacao}</p>
+                                            </div>
+                                        </>
+                                    )}
                                 </div>
                             </div>
                         ))}

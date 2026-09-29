@@ -230,3 +230,455 @@ main {
         font-size: 12px;
     }
 }
+
+/* Fichas Geopolíticas */
+
+.fichas-geopoliticas {
+    margin-top: 100px;
+    margin-bottom: 60px;
+}
+
+.cabecalho-Fichas {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 40px;
+    padding-bottom: 30px;
+    border-bottom: 2px solid var(--color-border-subtle);
+}
+
+.cabecalho-Fichas h2 {
+    font-size: 32px;
+    text-transform: uppercase;
+}
+
+.subtitulo-Fichas {
+    color: var(--color-text-muted);
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.tabela-Geopolitica {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid var(--color-border-subtle);
+    background-color: #0F0F12;
+}
+
+.cabecalho-Tabela {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr 1.5fr 1fr 1fr;
+    gap: 0;
+    padding: 20px;
+    background-color: #161619;
+    border-bottom: 2px solid var(--color-border-subtle);
+    text-transform: uppercase;
+    font-size: 11px;
+    font-weight: 600;
+    color: var(--color-accent-secondary);
+    letter-spacing: 1px;
+}
+
+.linha-Ficha {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr 1.5fr 1fr 1fr;
+    gap: 0;
+    padding: 20px;
+    border-bottom: 1px solid var(--color-border-subtle);
+    align-items: start;
+}
+
+.linha-Ficha:last-child {
+    border-bottom: none;
+}
+
+.linha-Ficha.ficha-ignorado {
+    background-color: rgba(255, 255, 255, 0.02);
+}
+
+.linha-Ficha.ficha-nula {
+    background-color: rgba(255, 255, 255, 0.01);
+}
+
+.linha-Ficha.ficha-antagonica {
+    background-color: rgba(230, 57, 70, 0.08);
+    border-left: 3px solid var(--color-accent-secondary);
+}
+
+.linha-Ficha.ficha-anfitrioes {
+    background-color: rgba(230, 57, 70, 0.05);
+    border-left: 3px solid #4CAF50;
+}
+
+.coluna-Faccao {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.nome-Faccao {
+    font-size: 13px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.desc-Faccao {
+    color: var(--color-text-muted);
+    font-size: 11px;
+    font-style: italic;
+}
+
+.coluna-Territorio,
+.coluna-Doutrina,
+.coluna-Lideranca,
+.coluna-Relacao {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.valor-Territorio,
+.valor-Doutrina,
+.valor-Lideranca,
+.valor-Relacao {
+    color: var(--color-text-muted);
+    font-size: 12px;
+    line-height: 1.5;
+}
+
+.valor-Lideranca {
+    color: #E4BEBC;
+    font-weight: 500;
+}
+
+.valor-Relacao {
+    text-transform: uppercase;
+    font-size: 11px;
+    font-weight: 600;
+    color: var(--color-accent-secondary);
+}
+
+.linha-Ficha.ficha-anfitrioes .valor-Relacao {
+    color: #4CAF50;
+}
+
+@media (max-width: 1200px) {
+    .cabecalho-Tabela,
+    .linha-Ficha {
+        grid-template-columns: 1fr 1fr 1.5fr 1fr 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .cabecalho-Fichas h2 {
+        font-size: 24px;
+    }
+
+    .cabecalho-Tabela,
+    .linha-Ficha {
+        grid-template-columns: 1fr;
+        gap: 10px;
+        padding: 15px;
+    }
+
+    .cabecalho-Tabela {
+        display: none;
+    }
+
+    .linha-Ficha::before {
+        content: attr(data-label);
+        display: block;
+        text-transform: uppercase;
+        font-size: 10px;
+        font-weight: 600;
+        color: var(--color-accent-secondary);
+        margin-bottom: 8px;
+        letter-spacing: 1px;
+    }
+
+    .linha-Ficha.ficha-antagonica {
+        border-left: 3px solid var(--color-accent-secondary);
+    }
+
+    .linha-Ficha.ficha-anfitrioes {
+        border-left: 3px solid #4CAF50;
+    }
+}
+
+/* Engenharia Náutica */
+
+.engenharia-naval {
+    margin-top: 100px;
+    margin-bottom: 60px;
+}
+
+.cabecalho-Engenharia {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 40px;
+    padding-bottom: 30px;
+    border-bottom: 2px solid var(--color-border-subtle);
+}
+
+.cabecalho-Engenharia h2 {
+    font-size: 32px;
+    text-transform: uppercase;
+}
+
+.subtitulo-Engenharia {
+    color: var(--color-text-muted);
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.grid-Vessels {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.card-Vessel {
+    background-color: #0F0F12;
+    border: 1px solid var(--color-border-subtle);
+    display: flex;
+    flex-direction: column;
+}
+
+.card-naval-combate {
+    border-color: var(--color-border-subtle);
+}
+
+.card-expedicao-carga {
+    border-color: var(--color-border-subtle);
+}
+
+.card-instrumento-optico {
+    border: 2px solid var(--color-accent-secondary);
+}
+
+.topo-Card-Vessel {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    border-bottom: 1px solid var(--color-border-subtle);
+    background-color: #161619;
+}
+
+.card-instrumento-optico .topo-Card-Vessel {
+    background-color: #2A0A0C;
+    border-bottom-color: var(--color-accent-secondary);
+}
+
+.tipo-Vessel {
+    text-transform: uppercase;
+    font-size: 10px;
+    font-weight: 600;
+    color: var(--color-text-muted);
+    letter-spacing: 1px;
+}
+
+.card-instrumento-optico .tipo-Vessel {
+    color: var(--color-accent-secondary);
+}
+
+.icone-Vessel {
+    font-size: 20px;
+    color: var(--color-accent-secondary);
+}
+
+.corpo-Card-Vessel {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.nome-Vessel {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+.nome-Vessel h3 {
+    font-size: 18px;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+.nome-Alterno {
+    color: var(--color-text-muted);
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.descricao-Vessel {
+    color: var(--color-text-muted);
+    font-size: 13px;
+    line-height: 1.6;
+}
+
+.especificacoes-Vessel {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.item-Esp {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 8px;
+    background-color: #161619;
+    border: 1px solid var(--color-border-subtle);
+}
+
+.label-Esp {
+    text-transform: uppercase;
+    color: var(--color-accent-secondary);
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+.valor-Esp {
+    color: var(--color-text-muted);
+    font-size: 12px;
+    text-align: right;
+}
+
+.finalidade-Vessel {
+    padding: 12px;
+    background-color: #161619;
+    border: 1px solid var(--color-border-subtle);
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.label-Finalidade {
+    text-transform: uppercase;
+    color: var(--color-accent-secondary);
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+.valor-Finalidade {
+    color: var(--color-text-muted);
+    font-size: 12px;
+}
+
+.mecanismo-Orientacao {
+    padding: 12px;
+    background-color: #161619;
+    border: 1px solid var(--color-accent-secondary);
+    border-left: 3px solid var(--color-accent-secondary);
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.label-Mecanismo {
+    text-transform: uppercase;
+    color: var(--color-accent-secondary);
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+.valor-Mecanismo {
+    color: #E4BEBC;
+    font-size: 12px;
+    line-height: 1.5;
+    font-style: italic;
+}
+
+.rodape-Card-Vessel {
+    padding: 15px;
+    border-top: 1px solid var(--color-border-subtle);
+    background-color: #0A0A0D;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.card-instrumento-optico .rodape-Card-Vessel {
+    border-top-color: var(--color-accent-secondary);
+}
+
+.label-Recurso {
+    text-transform: uppercase;
+    color: var(--color-text-muted);
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+.valor-Recurso {
+    color: var(--color-accent-secondary);
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.artefato-Leif {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.label-Artefato {
+    text-transform: uppercase;
+    color: var(--color-text-muted);
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+.valor-Navegacao {
+    color: var(--color-accent-secondary);
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+@media (max-width: 1024px) {
+    .grid-Vessels {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .grid-Regioes {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .grid-Vessels {
+        grid-template-columns: 1fr;
+    }
+
+    .cabecalho-Engenharia h2 {
+        font-size: 24px;
+    }
+
+    .nome-Vessel h3 {
+        font-size: 16px;
+    }
+
+    .descricao-Vessel {
+        font-size: 12px;
+    }
+
+    .item-Esp {
+        flex-direction: column;
+        gap: 5px;
+    }
+}

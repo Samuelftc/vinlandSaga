@@ -43,7 +43,7 @@ export default function Header() {
                         <Link to="/filosofias">Filosofias</Link>
                     </li>
                     <li className='liPagina'>
-                        <Link to="#">Mundo</Link>
+                        <Link to="/mundo">Mundo</Link>
                     </li>
                 </ul>
             </nav>
